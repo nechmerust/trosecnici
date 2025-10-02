@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - ČSOP Trosečníci</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-leaf"></i>
+                    <span>ČSOP Trosečníci</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Úvod</a>
+                <a href="about.html" class="nav-link">O nás</a>
+                <a href="locations.html" class="nav-link">Lokality, biocentra</a>
+                <a href="projects.html" class="nav-link">Projekty</a>
+                <a href="karel.html" class="nav-link">O Karlu Málkovi</a>
+                <a href="letter.html" class="nav-link">Charlieho dopis</a>
+                <a href="contact.html" class="nav-link active">Kontakt</a>
+                <button class="lang-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="lang-text">CS</span>
+                </button>
+            </div>
+            <div class="mobile-controls">
+                <button class="lang-toggle mobile-lang" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="mobile-lang-text">CS</span>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 data-cs="Kontakt" data-en="Contact">Kontakt</h1>
+                <p data-cs="Spojte se s námi a zapojte se do ochrany přírody" data-en="Get in touch with us and join nature conservation">
+                    Spojte se s námi a zapojte se do ochrany přírody
+                </p>
+            </div>
+        </section>
+
+        <!-- Page Content -->
+        <section class="page-content">
+            <div class="container">
+                <!-- Contact Information -->
+                <div class="contact-section">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h2 data-cs="Kontaktní údaje" data-en="Contact Information">Kontaktní údaje</h2>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-cs="Organizace" data-en="Organization">Organizace</h4>
+                                    <p>ZO ČSOP Trosečníci</p>
+                                    <p data-cs="Základní organizace Českého svazu ochránců přírody" data-en="Local organization of the Czech Union for Nature Conservation">
+                                        Základní organizace Českého svazu ochránců přírody
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:csoptrosecnici@seznam.cz">csoptrosecnici@seznam.cz</a></p>
+                                    <p data-cs="Odpovídáme obvykle do 48 hodin" data-en="We usually respond within 48 hours">
+                                        Odpovídáme obvykle do 48 hodin
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-cs="Identifikační údaje" data-en="Identification">Identifikační údaje</h4>
+                                    <p><strong data-cs="IČO" data-en="ID">IČO:</strong> 64772390</p>
+                                    <p data-cs="Registrovaná nezisková organizace" data-en="Registered non-profit organization">
+                                        Registrovaná nezisková organizace
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-cs="Bankovní spojení" data-en="Bank Details">Bankovní spojení</h4>
+                                    <p><strong data-cs="Číslo účtu" data-en="Account Number">Číslo účtu:</strong> 236201335 / 0300</p>
+                                    <p data-cs="Pro dary a členské příspěvky" data-en="For donations and membership fees">
+                                        Pro dary a členské příspěvky
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 data-cs="Oblast působnosti" data-en="Area of Activity">Oblast působnosti</h4>
+                                    <p>Ostrov u Lanškrouna</p>
+                                    <p data-cs="Pardubický kraj, Česká republika" data-en="Pardubice Region, Czech Republic">
+                                        Pardubický kraj, Česká republika
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="contact-form-section">
+                            <h2 data-cs="Napište nám" data-en="Write to Us">Napište nám</h2>
+                            <p data-cs="Máte zájem o naši činnost? Chcete se zapojit do ochrany přírody? Napište nám!" data-en="Are you interested in our activities? Do you want to get involved in nature conservation? Write to us!">
+                                Máte zájem o naši činnost? Chcete se zapojit do ochrany přírody? Napište nám!
+                            </p>
+
+                            <form class="contact-form" action="mailto:csoptrosecnici@seznam.cz" method="post" enctype="text/plain">
+                                <div class="form-group">
+                                    <label for="name" data-cs="Jméno a příjmení" data-en="Full Name">Jméno a příjmení</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" data-cs="Telefon (nepovinné)" data-en="Phone (optional)">Telefon (nepovinné)</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject" data-cs="Předmět" data-en="Subject">Předmět</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="" data-cs="Vyberte předmět..." data-en="Select subject...">Vyberte předmět...</option>
+                                        <option value="volunteer" data-cs="Zájem o dobrovolnictví" data-en="Interest in volunteering">Zájem o dobrovolnictví</option>
+                                        <option value="donation" data-cs="Finanční podpora" data-en="Financial support">Finanční podpora</option>
+                                        <option value="tour" data-cs="Komentovaná prohlídka" data-en="Guided tour">Komentovaná prohlídka</option>
+                                        <option value="education" data-cs="Vzdělávací program" data-en="Educational program">Vzdělávací program</option>
+                                        <option value="cooperation" data-cs="Spolupráce" data-en="Cooperation">Spolupráce</option>
+                                        <option value="other" data-cs="Jiné" data-en="Other">Jiné</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message" data-cs="Zpráva" data-en="Message">Zpráva</label>
+                                    <textarea id="message" name="message" rows="6" required data-cs="Napište nám svůj dotaz nebo zájem..." data-en="Write your question or interest..." placeholder="Napište nám svůj dotaz nebo zájem..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span data-cs="Odeslat zprávu" data-en="Send Message">Odeslat zprávu</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <div class="services-section">
+                    <h2 data-cs="Co nabízíme" data-en="What We Offer">Co nabízíme</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h4 data-cs="Komentované prohlídky" data-en="Guided Tours">Komentované prohlídky</h4>
+                            <p data-cs="Organizujeme komentované prohlídky přírodních lokalit pro školy, organizace i jednotlivce. Prohlídky jsou přizpůsobeny věku a zájmům účastníků." data-en="We organize guided tours of natural sites for schools, organizations and individuals. Tours are adapted to the age and interests of participants.">
+                                Organizujeme komentované prohlídky přírodních lokalit pro školy, organizace i jednotlivce. Prohlídky jsou přizpůsobeny věku a zájmům účastníků.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 data-cs="Vzdělávací programy" data-en="Educational Programs">Vzdělávací programy</h4>
+                            <p data-cs="Připravujeme vzdělávací programy pro školy všech stupňů. Nabízíme přednášky, workshopy a praktické aktivity zaměřené na ochranu přírody." data-en="We prepare educational programs for schools of all levels. We offer lectures, workshops and practical activities focused on nature conservation.">
+                                Připravujeme vzdělávací programy pro školy všech stupňů. Nabízíme přednášky, workshopy a praktické aktivity zaměřené na ochranu přírody.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4 data-cs="Poradenství" data-en="Consulting">Poradenství</h4>
+                            <p data-cs="Poskytujeme odborné poradenství v oblasti ochrany přírody, managementu chráněných území a ekologického hospodaření." data-en="We provide expert advice in the field of nature conservation, protected area management and ecological management.">
+                                Poskytujeme odborné poradenství v oblasti ochrany přírody, managementu chráněných území a ekologického hospodaření.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 data-cs="Dobrovolnické akce" data-en="Volunteer Actions">Dobrovolnické akce</h4>
+                            <p data-cs="Pravidelně organizujeme dobrovolnické akce na údržbu a obnovu přírodních lokalit. Každý může přispět svou prací k ochraně přírody." data-en="We regularly organize volunteer actions for maintenance and restoration of natural sites. Everyone can contribute their work to nature conservation.">
+                                Pravidelně organizujeme dobrovolnické akce na údržbu a obnovu přírodních lokalit. Každý může přispět svou prací k ochraně přírody.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Help Section -->
+                <div class="help-section">
+                    <h2 data-cs="Jak můžete pomoci" data-en="How You Can Help">Jak můžete pomoci</h2>
+                    <div class="help-options">
+                        <div class="help-option">
+                            <div class="help-number">1</div>
+                            <div class="help-content">
+                                <h4 data-cs="Staňte se členem" data-en="Become a Member">Staňte se členem</h4>
+                                <p data-cs="Členství v naší organizaci vás zapojí do rozhodování o našich aktivitách a umožní vám aktivně se podílet na ochraně přírody." data-en="Membership in our organization involves you in decision-making about our activities and allows you to actively participate in nature conservation.">
+                                    Členství v naší organizaci vás zapojí do rozhodování o našich aktivitách a umožní vám aktivně se podílet na ochraně přírody.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="help-option">
+                            <div class="help-number">2</div>
+                            <div class="help-content">
+                                <h4 data-cs="Přispějte finančně" data-en="Donate">Přispějte finančně</h4>
+                                <p data-cs="Vaše dary nám umožňují realizovat ochranné projekty, nakupovat potřebné vybavení a rozšiřovat naše aktivity." data-en="Your donations enable us to implement conservation projects, purchase necessary equipment and expand our activities.">
+                                    Vaše dary nám umožňují realizovat ochranné projekty, nakupovat potřebné vybavení a rozšiřovat naše aktivity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="help-option">
+                            <div class="help-number">3</div>
+                            <div class="help-content">
+                                <h4 data-cs="Zapojte se jako dobrovolník" data-en="Volunteer">Zapojte se jako dobrovolník</h4>
+                                <p data-cs="Dobrovolnická práce je srdcem naší organizace. Můžete pomáhat v terénu, při organizaci akcí nebo s administrativou." data-en="Volunteer work is the heart of our organization. You can help in the field, with organizing events or with administration.">
+                                    Dobrovolnická práce je srdcem naší organizace. Můžete pomáhat v terénu, při organizaci akcí nebo s administrativou.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="help-option">
+                            <div class="help-number">4</div>
+                            <div class="help-content">
+                                <h4 data-cs="Šiřte povědomí" data-en="Spread Awareness">Šiřte povědomí</h4>
+                                <p data-cs="Pomozte nám šířit povědomí o důležitosti ochrany přírody. Sdílejte naše aktivity na sociálních sítích a mluvte o nás s přáteli." data-en="Help us spread awareness about the importance of nature conservation. Share our activities on social media and talk about us with friends.">
+                                    Pomozte nám šířit povědomí o důležitosti ochrany přírody. Sdílejte naše aktivity na sociálních sítích a mluvte o nás s přáteli.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZO ČSOP Trosečníci</h3>
+                    <p data-cs="IČO: 64772390" data-en="ID: 64772390">IČO: 64772390</p>
+                    <p>Email: csoptrosecnici@seznam.cz</p>
+                    <p data-cs="Číslo účtu: 236201335 / 0300" data-en="Account Number: 236201335 / 0300">Číslo účtu: 236201335 / 0300</p>
+                </div>
+                <div class="footer-section">
+                    <p data-cs="Nabízíme komentovanou prohlídku ostrovské přírody" data-en="We offer guided tours of Ostrov's nature">
+                        Nabízíme komentovanou prohlídku ostrovské přírody
+                    </p>
+                    <p data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">
+                        Hledáme dobrovolníky, sponzory, kolegy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
