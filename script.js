@@ -29,6 +29,8 @@ const translations = {
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded'); // Debug log
+    
     // Set initial language
     updateLanguage();
     
@@ -40,6 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add form validation if contact form exists
     initializeContactForm();
+    
+    // Alternative mobile menu initialization (fallback)
+    setTimeout(function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileMenuBtn && !mobileMenuBtn.hasAttribute('data-initialized')) {
+            console.log('Fallback mobile menu initialization'); // Debug log
+            mobileMenuBtn.setAttribute('data-initialized', 'true');
+            mobileMenuBtn.onclick = function(e) {
+                e.preventDefault();
+                toggleMobileMenu();
+                return false;
+            };
+        }
+    }, 100);
 });
 
 // Language toggle function
@@ -88,11 +104,16 @@ function updateLanguage() {
 
 // Mobile menu functionality
 function toggleMobileMenu() {
+    console.log('toggleMobileMenu called'); // Debug log
     const navMenu = document.getElementById('nav-menu');
     const menuIcon = document.getElementById('menu-icon');
     
+    console.log('navMenu:', navMenu); // Debug log
+    console.log('menuIcon:', menuIcon); // Debug log
+    
     if (navMenu && menuIcon) {
         navMenu.classList.toggle('active');
+        console.log('Menu toggled, active:', navMenu.classList.contains('active')); // Debug log
         
         // Toggle menu icon
         if (navMenu.classList.contains('active')) {
@@ -102,14 +123,29 @@ function toggleMobileMenu() {
             menuIcon.classList.remove('fa-times');
             menuIcon.classList.add('fa-bars');
         }
+    } else {
+        console.log('navMenu or menuIcon not found'); // Debug log
     }
 }
 
 // Initialize mobile menu
 function initializeMobileMenu() {
+    console.log('Initializing mobile menu'); // Debug log
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    console.log('Mobile menu button:', mobileMenuBtn); // Debug log
+    
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        // Remove any existing event listeners
+        mobileMenuBtn.removeEventListener('click', toggleMobileMenu);
+        // Add new event listener
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+        console.log('Mobile menu button event listener added'); // Debug log
+    } else {
+        console.log('Mobile menu button not found'); // Debug log
     }
     
     // Close mobile menu when clicking on a link
