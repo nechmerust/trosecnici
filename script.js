@@ -532,3 +532,33 @@ Děkujeme za zájem o ochranu přírody.
 🌱 Welcome to ČSOP Trosečníci
 Thank you for your interest in nature conservation.
 `);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const langToggle = document.getElementById('lang-toggle');
+    const langText = document.querySelector('.lang-text');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Language toggle functionality
+    langToggle.addEventListener('click', () => {
+        if (langText.textContent === 'CS') {
+            langText.textContent = 'EN';
+            // Here you would add logic to change content to English
+            // For example, iterate through elements with data-en attribute and update their textContent
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.dataset.en;
+            });
+        } else {
+            langText.textContent = 'CS';
+            // Here you would add logic to change content to Czech
+            document.querySelectorAll('[data-cs]').forEach(element => {
+                element.textContent = element.dataset.cs;
+            });
+        }
+    });
+});
