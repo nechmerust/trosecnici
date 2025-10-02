@@ -572,6 +572,8 @@ body {
         flex-direction: column;
         padding: 1rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        border-radius: 0 0 0.5rem 0.5rem;
     }
 
     .nav-menu.active {
@@ -592,6 +594,19 @@ body {
 
     .mobile-controls {
         display: flex;
+    }
+    
+    .mobile-menu-btn {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+    
+    .mobile-menu-btn i {
+        pointer-events: none;
     }
 
     .hero {
@@ -938,6 +953,15 @@ html {
     content: "🌿 ";
     font-size: 1.5rem;
     margin-right: 0.25rem;
+}
+
+/* Fallback for hamburger menu if Font Awesome doesn't load */
+.mobile-menu-btn .fa-bars::before {
+    content: "☰";
+}
+
+.mobile-menu-btn .fa-times::before {
+    content: "✕";
 }
 
 /* Print Styles for Images */
