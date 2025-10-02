@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ČSOP Trosečníci - Ochrana přírody na Ostrově u Lanškrouna</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo" onclick="showPage('home')">
+                <i class="fas fa-leaf"></i>
+                <span>ČSOP Trosečníci</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-link active" data-page="home" data-cs="Úvod" data-en="Introduction">Úvod</a>
+                <a href="#" class="nav-link" data-page="about" data-cs="O nás" data-en="About Us">O nás</a>
+                <a href="#" class="nav-link" data-page="locations" data-cs="Lokality, biocentra" data-en="Locations, Biocenters">Lokality, biocentra</a>
+                <a href="#" class="nav-link" data-page="projects" data-cs="Projekty" data-en="Projects">Projekty</a>
+                <a href="#" class="nav-link" data-page="karel" data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</a>
+                <a href="#" class="nav-link" data-page="letter" data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</a>
+                <a href="#" class="nav-link" data-page="contact" data-cs="Kontakt" data-en="Contact">Kontakt</a>
+                
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="lang-toggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="lang-text">CS</span>
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="mobile-controls">
+                <button class="lang-toggle mobile-lang" id="mobile-lang-toggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="mobile-lang-text">CS</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h1 class="hero-title" data-cs="ČSOP Trosečníci na zeleném Ostrově u Lanškrouna" data-en="ČSOP Trosečníci on the green Island near Lanškroun">
+                        ČSOP Trosečníci na zeleném Ostrově u Lanškrouna
+                    </h1>
+                    <p class="hero-subtitle" data-cs="Ochrana přírody a biodiverzity v regionu" data-en="Nature and biodiversity protection in the region">
+                        Ochrana přírody a biodiverzity v regionu
+                    </p>
+                    <p class="hero-description" data-cs="Ostrov u Lanškrouna je prostoupen přírodou, i když to tak na první pohled nevypadá. Přes obec vede evropsky významný Nadregionální biokoridor K-82, který prochází přes dvě přírodní rezervace (Třebovské stěny a Kaštánek) a ten dále podporují mnohé významné krajinné prvky, biocentra a pomocné biokoridory." data-en="Ostrov near Lanškroun is permeated by nature, even if it doesn't seem so at first glance. The village is crossed by the European significant Supra-regional Biocorridor K-82, which passes through two nature reserves (Třebovské stěny and Kaštánek) and is further supported by many important landscape elements, biocenters, and auxiliary biocorridors.">
+                        Ostrov u Lanškrouna je prostoupen přírodou, i když to tak na první pohled nevypadá. Přes obec vede evropsky významný Nadregionální biokoridor K-82, který prochází přes dvě přírodní rezervace (Třebovské stěny a Kaštánek) a ten dále podporují mnohé významné krajinné prvky, biocentra a pomocné biokoridory.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('contact')">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-cs="Nabízíme komentovanou prohlídku" data-en="We offer guided tours">Nabízíme komentovanou prohlídku</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="showPage('about')">
+                            <i class="fas fa-users"></i>
+                            <span data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">Hledáme dobrovolníky, sponzory, kolegy</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">130</div>
+                            <div class="stat-label" data-cs="hektarů chráněné přírody" data-en="hectares of protected nature">hektarů chráněné přírody</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label" data-cs="přírodních lokalit" data-en="natural localities">přírodních lokalit</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label" data-cs="chráněné rezervace" data-en="protected reserves">chráněné rezervace</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-cs="Naše činnost" data-en="Our Activities">Naše činnost</h2>
+                        <p data-cs="Věnujeme se komplexní ochraně přírody v regionu Ostrova u Lanškrouna" data-en="We are dedicated to comprehensive nature protection in the Ostrov u Lanškrouna region">
+                            Věnujeme se komplexní ochraně přírody v regionu Ostrova u Lanškrouna
+                        </p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h3 data-cs="Ochrana lesů" data-en="Forest Protection">Ochrana lesů</h3>
+                            <p data-cs="Péče o původní lesy Třebovských stěn a obnova lesních ekosystémů" data-en="Care for the original forests of Třebovské stěny and restoration of forest ecosystems">
+                                Péče o původní lesy Třebovských stěn a obnova lesních ekosystémů
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3 data-cs="Mokřady a rašeliniště" data-en="Wetlands and Peat Bogs">Mokřady a rašeliniště</h3>
+                            <p data-cs="Zachování vzácných mokřadních biotopů a slatiništ" data-en="Preservation of rare wetland habitats and fens">
+                                Zachování vzácných mokřadních biotopů a slatiništ
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-dove"></i>
+                            </div>
+                            <h3 data-cs="Ochrana ptactva" data-en="Bird Protection">Ochrana ptactva</h3>
+                            <p data-cs="Monitoring a ochrana ptačích druhů a jejich hnízdišť" data-en="Monitoring and protection of bird species and their nesting sites">
+                                Monitoring a ochrana ptačích druhů a jejich hnízdišť
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Legacy Section -->
+            <section class="legacy">
+                <div class="container">
+                    <div class="legacy-content">
+                        <h2 data-cs="Charlieho odkaz" data-en="Charlie's Legacy">Charlieho odkaz</h2>
+                        <p data-cs="Karel Málek 'Charlie' zasvětil svůj život ochraně přírody v ostrovské kotlině. Po jeho odchodu pokračujeme v jeho tradici a duchu ochrany přírody." data-en="Karel Málek 'Charlie' dedicated his life to protecting nature in the Ostrov basin. After his departure, we continue in his tradition and spirit of nature conservation.">
+                            Karel Málek "Charlie" zasvětil svůj život ochraně přírody v ostrovské kotlině. Po jeho odchodu pokračujeme v jeho tradici a duchu ochrany přírody.
+                        </p>
+                        <button class="btn btn-primary" onclick="showPage('karel')">
+                            <i class="fas fa-heart"></i>
+                            <span data-cs="Více o Karlovi Málkovi" data-en="More about Karel Málek">Více o Karlovi Málkovi</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 data-cs="O nás" data-en="About Us">O nás</h1>
+                    <p data-cs="Základní organizace Českého svazu ochránců přírody" data-en="Local organization of the Czech Union for Nature Conservation">
+                        Základní organizace Českého svazu ochránců přírody
+                    </p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="content-grid">
+                        <div class="content-text">
+                            <h2 data-cs="Naše mise" data-en="Our Mission">Naše mise</h2>
+                            <p data-cs="ČSOP Trosečníci je základní organizace Českého svazu ochránců přírody, která se věnuje ochraně přírody a krajiny v regionu Ostrova u Lanškrouna. Naše činnost zahrnuje praktickou ochranu přírody, vzdělávání veřejnosti a propagaci ekologického myšlení." data-en="ČSOP Trosečníci is a local organization of the Czech Union for Nature Conservation, dedicated to protecting nature and landscape in the Ostrov u Lanškroun region. Our activities include practical nature conservation, public education, and promoting ecological thinking.">
+                                ČSOP Trosečníci je základní organizace Českého svazu ochránců přírody, která se věnuje ochraně přírody a krajiny v regionu Ostrova u Lanškrouna. Naše činnost zahrnuje praktickou ochranu přírody, vzdělávání veřejnosti a propagaci ekologického myšlení.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 data-cs="Kontakt" data-en="Contact">Kontakt</h1>
+                    <p data-cs="Spojte se s námi" data-en="Get in touch with us">Spojte se s námi</p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3 data-cs="Kontaktní údaje" data-en="Contact Information">Kontaktní údaje</h3>
+                            <p><strong>Email:</strong> csoptrosecnici@seznam.cz</p>
+                            <p><strong data-cs="Číslo účtu" data-en="Account Number">Číslo účtu:</strong> 236201335 / 0300</p>
+                            <p><strong data-cs="IČO" data-en="ID">IČO:</strong> 64772390</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Locations Page -->
+        <div id="locations-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 data-cs="Lokality, biocentra" data-en="Locations, Biocenters">Lokality, biocentra</h1>
+                    <p data-cs="Chráněná území a významné lokality" data-en="Protected areas and significant locations">
+                        Chráněná území a významné lokality
+                    </p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="locations-grid">
+                        <div class="location-card">
+                            <h3 data-cs="Třebovské stěny" data-en="Třebovské stěny">Třebovské stěny</h3>
+                            <p data-cs="Přírodní rezervace s unikátními skalními útvary a vzácnou flórou." data-en="Nature reserve with unique rock formations and rare flora.">
+                                Přírodní rezervace s unikátními skalními útvary a vzácnou flórou.
+                            </p>
+                        </div>
+                        <div class="location-card">
+                            <h3 data-cs="Kaštánek" data-en="Kaštánek">Kaštánek</h3>
+                            <p data-cs="Přírodní rezervace s cenným lesním ekosystémem." data-en="Nature reserve with valuable forest ecosystem.">
+                                Přírodní rezervace s cenným lesním ekosystémem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 data-cs="Projekty" data-en="Projects">Projekty</h1>
+                    <p data-cs="Naše aktivity a projekty" data-en="Our activities and projects">Naše aktivity a projekty</p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3 data-cs="Obnova mokřadů" data-en="Wetland Restoration">Obnova mokřadů</h3>
+                            <p data-cs="Projekt zaměřený na obnovu a ochranu mokřadních biotopů v regionu." data-en="Project focused on restoration and protection of wetland habitats in the region.">
+                                Projekt zaměřený na obnovu a ochranu mokřadních biotopů v regionu.
+                            </p>
+                        </div>
+                        <div class="project-card">
+                            <h3 data-cs="Monitoring ptactva" data-en="Bird Monitoring">Monitoring ptactva</h3>
+                            <p data-cs="Dlouhodobý monitoring ptačích populací a jejich hnízdišť." data-en="Long-term monitoring of bird populations and their nesting sites.">
+                                Dlouhodobý monitoring ptačích populací a jejich hnízdišť.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Karel Malek Page -->
+        <div id="karel-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</h1>
+                    <p data-cs="Zakladatel a duchovní otec naší organizace" data-en="Founder and spiritual father of our organization">
+                        Zakladatel a duchovní otec naší organizace
+                    </p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="content-text">
+                        <p data-cs="Karel Málek, přezdívaný 'Charlie', byl zakladatelem a dlouholetým předsedou ČSOP Trosečníci. Celý svůj život zasvětil ochraně přírody v ostrovské kotlině a stal se symbolem boje za zachování místní biodiverzity." data-en="Karel Málek, nicknamed 'Charlie', was the founder and long-time chairman of ČSOP Trosečníci. He dedicated his entire life to protecting nature in the Ostrov basin and became a symbol of the fight to preserve local biodiversity.">
+                            Karel Málek, přezdívaný "Charlie", byl zakladatelem a dlouholetým předsedou ČSOP Trosečníci. Celý svůj život zasvětil ochraně přírody v ostrovské kotlině a stal se symbolem boje za zachování místní biodiverzity.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Charlie's Letter Page -->
+        <div id="letter-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</h1>
+                    <p data-cs="Poslední vzkaz Karla Málka" data-en="Karel Málek's final message">Poslední vzkaz Karla Málka</p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="letter-content">
+                        <p data-cs="Zde bude obsah Charlieho dopisu..." data-en="Here will be the content of Charlie's letter...">
+                            Zde bude obsah Charlieho dopisu...
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZO ČSOP Trosečníci</h3>
+                    <p data-cs="IČO: 64772390" data-en="ID: 64772390">IČO: 64772390</p>
+                    <p>Email: csoptrosecnici@seznam.cz</p>
+                    <p data-cs="Číslo účtu: 236201335 / 0300" data-en="Account Number: 236201335 / 0300">Číslo účtu: 236201335 / 0300</p>
+                </div>
+                <div class="footer-section">
+                    <p data-cs="Nabízíme komentovanou prohlídku ostrovské přírody" data-en="We offer guided tours of Ostrov's nature">
+                        Nabízíme komentovanou prohlídku ostrovské přírody
+                    </p>
+                    <p data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">
+                        Hledáme dobrovolníky, sponzory, kolegy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
