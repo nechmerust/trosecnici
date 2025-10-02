@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlieho dopis - ČSOP Trosečníci</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="ČSOP Trosečníci Logo" class="logo-image">
+                    <span>ČSOP Trosečníci</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Úvod</a>
+                <a href="about.html" class="nav-link">O nás</a>
+                <a href="locations.html" class="nav-link">Lokality, biocentra</a>
+                <a href="projects.html" class="nav-link">Projekty</a>
+                <a href="karel.html" class="nav-link">O Karlu Málkovi</a>
+                <a href="letter.html" class="nav-link active">Charlieho dopis</a>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+                <button class="lang-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="lang-text">CS</span>
+                </button>
+            </div>
+            <div class="mobile-controls">
+                <button class="lang-toggle mobile-lang" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="mobile-lang-text">CS</span>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</h1>
+                <p data-cs="Poslední vzkaz Karla Málka pro budoucí generace" data-en="Karel Málek's final message for future generations">
+                    Poslední vzkaz Karla Málka pro budoucí generace
+                </p>
+            </div>
+        </section>
+
+        <!-- Page Content -->
+        <section class="page-content">
+            <div class="container">
+                <!-- Letter Introduction -->
+                <div class="letter-intro">
+                    <div class="letter-intro-image">
+                        <img src="images/handwritten-letter.jpg" alt="Charlieho rukopisný dopis" class="page-image">
+                    </div>
+                    <div class="intro-content">
+                        <p data-cs="Tento dopis napsal Karel Málek 'Charlie' krátce před svým odchodem. Je to jeho osobní vzkaz všem, kteří pokračují v ochraně přírody ostrovské kotliny. Dopis byl nalezen mezi jeho osobními věcmi a stal se duchovním odkazem naší organizace." data-en="This letter was written by Karel Málek 'Charlie' shortly before his departure. It is his personal message to all who continue to protect the nature of the Ostrov basin. The letter was found among his personal belongings and became the spiritual legacy of our organization.">
+                            Tento dopis napsal Karel Málek "Charlie" krátce před svým odchodem. Je to jeho osobní vzkaz všem, kteří pokračují v ochraně přírody ostrovské kotliny. Dopis byl nalezen mezi jeho osobními věcmi a stal se duchovním odkazem naší organizace.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Letter -->
+                <div class="letter-content">
+                    <div class="letter-header">
+                        <div class="letter-date" data-cs="Ostrov u Lanškrouna, podzim 2018" data-en="Ostrov u Lanškroun, Autumn 2018">
+                            Ostrov u Lanškrouna, podzim 2018
+                        </div>
+                        <div class="letter-salutation" data-cs="Milí přátelé a pokračovatelé," data-en="Dear friends and successors,">
+                            Milí přátelé a pokračovatelé,
+                        </div>
+                    </div>
+
+                    <div class="letter-body">
+                        <div class="letter-paragraph" data-cs="píšu vám tyto řádky s vědomím, že má cesta se pomalu chylí ke koncu, ale vaše teprve začíná nebo pokračuje. Za těch téměř třicet let, co jsme společně chránili naši krásnou ostrovskou přírodu, jsem poznal, že nejcennější není to, co dokážeme zachránit my, ale to, co dokážeme předat dalším generacím." data-en="I am writing these lines to you knowing that my journey is slowly coming to an end, but yours is just beginning or continuing. In the almost thirty years that we have protected our beautiful Ostrov nature together, I have learned that the most valuable thing is not what we can save, but what we can pass on to future generations.">
+                            píšu vám tyto řádky s vědomím, že má cesta se pomalu chylí ke koncu, ale vaše teprve začíná nebo pokračuje. Za těch téměř třicet let, co jsme společně chránili naši krásnou ostrovskou přírodu, jsem poznal, že nejcennější není to, co dokážeme zachránit my, ale to, co dokážeme předat dalším generacím.
+                        </div>
+
+                        <div class="letter-paragraph" data-cs="Když jsem v roce 1989 zakládal naši organizaci, měl jsem sen. Sen o tom, že se podaří zachovat to nejcennější z naší krajiny - Třebovské stěny s jejich vzácnými rostlinami, Kaštánek s jeho původními lesy, mokřady plné života a všechny ty malé, ale o to důležitější kousky přírody, které dělají náš Ostrov skutečně zeleným." data-en="When I founded our organization in 1989, I had a dream. A dream that we would succeed in preserving the most precious parts of our landscape - Třebovské stěny with their rare plants, Kaštánek with its original forests, wetlands full of life and all those small but all the more important pieces of nature that make our Ostrov truly green.">
+                            Když jsem v roce 1989 zakládal naši organizaci, měl jsem sen. Sen o tom, že se podaří zachovat to nejcennější z naší krajiny - Třebovské stěny s jejich vzácnými rostlinami, Kaštánek s jeho původními lesy, mokřady plné života a všechny ty malé, ale o to důležitější kousky přírody, které dělají náš Ostrov skutečně zeleným.
+                        </div>
+
+                        <div class="letter-paragraph" data-cs="Dnes, když se ohlížím zpět, vidím, že se nám mnoho podařilo. Naše rezervace jsou chráněné, biokoridor funguje, mladí lidé se učí milovat přírodu. Ale vidím také, že práce není nikdy hotová. Příroda potřebuje naši péči každý den, každý rok, každé desetiletí." data-en="Today, when I look back, I see that we have achieved a lot. Our reserves are protected, the biocorridor is functioning, young people are learning to love nature. But I also see that the work is never finished. Nature needs our care every day, every year, every decade.">
+                            Dnes, když se ohlížím zpět, vidím, že se nám mnoho podařilo. Naše rezervace jsou chráněné, biokoridor funguje, mladí lidé se učí milovat přírodu. Ale vidím také, že práce není nikdy hotová. Příroda potřebuje naši péči každý den, každý rok, každé desetiletí.
+                        </div>
+
+                        <div class="letter-paragraph" data-cs="Proto vás prosím - pokračujte. Pokračujte v tom, co jsme začali. Nejen proto, že je to naše povinnost, ale proto, že je to naše radost. Každé ráno, kdy jsem vyšel do terénu, každý den strávený v přírodě byl pro mě darem. Doufám, že i pro vás bude ochrana přírody zdrojem radosti a naplnění." data-en="Therefore, I ask you - continue. Continue what we started. Not only because it is our duty, but because it is our joy. Every morning when I went out into the field, every day spent in nature was a gift for me. I hope that nature conservation will also be a source of joy and fulfillment for you.">
+                            Proto vás prosím - pokračujte. Pokračujte v tom, co jsme začali. Nejen proto, že je to naše povinnost, ale proto, že je to naše radost. Každé ráno, kdy jsem vyšel do terénu, každý den strávený v přírodě byl pro mě darem. Doufám, že i pro vás bude ochrana přírody zdrojem radosti a naplnění.
+                        </div>
+
+                        <div class="letter-paragraph" data-cs="Nezapomínejte na to, že nejsme jen ochránci přírody - jsme také učitelé. Každý člověk, kterého dokážeme inspirovat k lásce k přírodě, je naší největší výhrou. Každé dítě, které se naučí rozpoznat zpěv ptáků nebo pozná vzácnou rostlinu, je zárukou toho, že naše práce bude pokračovat i v budoucnu." data-en="Don't forget that we are not just nature protectors - we are also teachers. Every person we can inspire to love nature is our greatest victory. Every child who learns to recognize bird songs or knows a rare plant is a guarantee that our work will continue in the future.">
+                            Nezapomínejte na to, že nejsme jen ochránci přírody - jsme také učitelé. Každý člověk, kterého dokážeme inspirovat k lásce k přírodě, je naší největší výhrou. Každé dítě, které se naučí rozpoznat zpěv ptáků nebo pozná vzácnou rostlinu, je zárukou toho, že naše práce bude pokračovat i v budoucnu.
+                        </div>
+
+                        <div class="letter-paragraph" data-cs="Buďte trpěliví. Příroda má svůj vlastní čas a my se mu musíme přizpůsobit. Někdy se výsledky naší práce projeví až za roky, někdy za desetiletí. Ale věřte mi - každá hodina strávená v terénu, každá vysazená rostlina, každý zachráněný biotop má smysl." data-en="Be patient. Nature has its own time and we must adapt to it. Sometimes the results of our work show up only after years, sometimes after decades. But believe me - every hour spent in the field, every planted plant, every saved biotope makes sense.">
+                            Buďte trpěliví. Příroda má svůj vlastní čas a my se mu musíme přizpůsobit. Někdy se výsledky naší práce projeví až za roky, někdy za desetiletí. Ale věřte mi - každá hodina strávená v terénu, každá vysazená rostlina, každý zachráněný biotop má smysl.
+                        </div>
+
+                        <div class="letter-paragraph" data-cs="A nakonec - nezapomínejte se radovat. Radujte se z každého nového objevu, z každého úspěchu, z každého krásného okamžiku stráveného v přírodě. Radost je to, co nás žene vpřed, co nám dává sílu pokračovat i v těžkých chvílích." data-en="And finally - don't forget to rejoice. Rejoice in every new discovery, every success, every beautiful moment spent in nature. Joy is what drives us forward, what gives us strength to continue even in difficult times.">
+                            A nakonec - nezapomínejte se radovat. Radujte se z každého nového objevu, z každého úspěchu, z každého krásného okamžiku stráveného v přírodě. Radost je to, co nás žene vpřed, co nám dává sílu pokračovat i v těžkých chvílích.
+                        </div>
+
+                        <div class="letter-closing">
+                            <div class="closing-text" data-cs="Děkuji vám za všechno, co jste pro naši přírodu udělali, a za všechno, co ještě uděláte. Budu na vás myslet, kdykoli budete procházet našimi milovanými lokalitami." data-en="Thank you for everything you have done for our nature, and for everything you will still do. I will think of you whenever you walk through our beloved sites.">
+                                Děkuji vám za všechno, co jste pro naši přírodu udělali, a za všechno, co ještě uděláte. Budu na vás myslet, kdykoli budete procházet našimi milovanými lokalitami.
+                            </div>
+                            
+                            <div class="signature">
+                                <div class="signature-text" data-cs="S láskou k přírodě a s vírou v budoucnost," data-en="With love for nature and faith in the future,">
+                                    S láskou k přírodě a s vírou v budoucnost,
+                                </div>
+                                <div class="signature-name">Karel Málek "Charlie"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter Reflection -->
+                <div class="letter-reflection">
+                    <h2 data-cs="Charlieho odkaz žije dál" data-en="Charlie's Legacy Lives On">Charlieho odkaz žije dál</h2>
+                    <p data-cs="Tento dopis se stal naším průvodcem a inspirací. Charlieho slova nás provázejí při každé naší činnosti a připomínají nám, proč je naše práce tak důležitá. Jeho vize zelené ostrovské kotliny se stala naším závazkem vůči budoucím generacím." data-en="This letter has become our guide and inspiration. Charlie's words accompany us in all our activities and remind us why our work is so important. His vision of a green Ostrov basin has become our commitment to future generations.">
+                        Tento dopis se stal naším průvodcem a inspirací. Charlieho slova nás provázejí při každé naší činnosti a připomínají nám, proč je naše práce tak důležitá. Jeho vize zelené ostrovské kotliny se stala naším závazkem vůči budoucím generacím.
+                    </p>
+
+                    <div class="reflection-actions">
+                        <a href="karel.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i>
+                            <span data-cs="Zpět na stránku o Karlovi" data-en="Back to Karel's Page">Zpět na stránku o Karlovi</span>
+                        </a>
+                        <a href="projects.html" class="btn btn-primary">
+                            <i class="fas fa-seedling"></i>
+                            <span data-cs="Pokračovat v jeho díle" data-en="Continue His Work">Pokračovat v jeho díle</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZO ČSOP Trosečníci</h3>
+                    <p data-cs="IČO: 64772390" data-en="ID: 64772390">IČO: 64772390</p>
+                    <p>Email: csoptrosecnici@seznam.cz</p>
+                    <p data-cs="Číslo účtu: 236201335 / 0300" data-en="Account Number: 236201335 / 0300">Číslo účtu: 236201335 / 0300</p>
+                </div>
+                <div class="footer-section">
+                    <p data-cs="Nabízíme komentovanou prohlídku ostrovské přírody" data-en="We offer guided tours of Ostrov's nature">
+                        Nabízíme komentovanou prohlídku ostrovské přírody
+                    </p>
+                    <p data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">
+                        Hledáme dobrovolníky, sponzory, kolegy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
