@@ -18,27 +18,38 @@
                     <span>ČSOP Trosečníci</span>
                 </a>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Úvod</a>
-                <a href="about.html" class="nav-link">O nás</a>
-                <a href="locations.html" class="nav-link">Lokality, biocentra</a>
-                <a href="projects.html" class="nav-link active">Projekty</a>
-                <a href="karel.html" class="nav-link">O Karlu Málkovi</a>
-                <a href="letter.html" class="nav-link">Charlieho dopis</a>
-                <a href="contact.html" class="nav-link">Kontakt</a>
-                <button class="lang-toggle" onclick="toggleLanguage()">
-                    <i class="fas fa-globe"></i>
-                    <span id="lang-text">CS</span>
-                </button>
-            </div>
-            <div class="mobile-controls">
-                <button class="lang-toggle mobile-lang" onclick="toggleLanguage()">
-                    <i class="fas fa-globe"></i>
-                    <span id="mobile-lang-text">CS</span>
-                </button>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars" id="menu-icon"></i>
-                </button>
+                        <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active" data-cs="Úvod" data-en="Home">Úvod</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-cs="O nás" data-en="About Us">O nás</a>
+                </li>
+                <li class="nav-item">
+                    <a href="locations.html" class="nav-link" data-cs="Lokality, biocentra" data-en="Locations, Biocenters">Lokality, biocentra</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link" data-cs="Projekty" data-en="Projects">Projekty</a>
+                </li>
+                <li class="nav-item">
+                    <a href="karel.html" class="nav-link" data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="letter.html" class="nav-link" data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-cs="Kontakt" data-en="Contact">Kontakt</a>
+                </li>
+                <li class="nav-item language-switcher">
+                    <button id="lang-toggle" class="lang-btn">
+                        <span class="lang-text">CS</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
