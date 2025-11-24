@@ -40,7 +40,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 4.5rem; /* Zvýšeno pro pohodlí */
 }
 
 .nav-logo {
@@ -55,10 +55,19 @@ body {
 .nav-logo a {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     color: white;
     text-decoration: none;
 }
+
+/* --- OPRAVA LOGA ZDE --- */
+.logo-image {
+    height: 3.5rem; /* Pevná výška loga - cca 56px */
+    width: auto;    /* Šířka se dopočítá automaticky */
+    object-fit: contain;
+    display: block;
+}
+/* ----------------------- */
 
 .nav-logo:hover {
     opacity: 0.9;
@@ -85,7 +94,7 @@ body {
 }
 
 .nav-link.active {
-    background-color: #0f5132; /* Tmavší zelená pro aktivní odkaz */
+    background-color: #0f5132;
     font-weight: 700;
 }
 
@@ -116,6 +125,7 @@ body {
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    padding: 5px;
 }
 
 .bar {
@@ -124,6 +134,7 @@ body {
     height: 3px;
     background-color: white;
     transition: all 0.3s ease-in-out;
+    border-radius: 3px;
 }
 
 /* =========================================
@@ -131,14 +142,13 @@ body {
    ========================================= */
 .hero {
     position: relative;
-    /* Pokud nemáte hero-nature.jpg, použije se záložní barva */
     background-color: #2f3e46; 
     background-image: url('images/hero-nature.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding: 8rem 0 6rem; /* Větší padding pro lepší prostor */
+    padding: 8rem 0 6rem;
     text-align: center;
     overflow: hidden;
 }
@@ -146,8 +156,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    /* Gradient pro lepší čitelnost textu */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
 }
 
 .hero-content {
@@ -201,7 +210,7 @@ body {
 }
 
 /* =========================================
-   4. Button Styles (Fixed & Visible)
+   4. Button Styles
    ========================================= */
 .hero-buttons {
     display: flex;
@@ -224,7 +233,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     padding: 0.8rem 2rem;
-    border-radius: 2rem; /* Moderní kulatá tlačítka */
+    border-radius: 2rem;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -235,7 +244,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Primární tlačítko (Bílé s zeleným textem v Hero, Zelené jinde) */
 .btn-primary {
     background-color: #16a34a; 
     color: white;
@@ -249,7 +257,6 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Specifika pro Hero sekci - aby tlačítko vyniklo na tmavém pozadí */
 .hero .btn-primary {
     background-color: white;
     color: #166534;
@@ -260,13 +267,11 @@ body {
     color: #14532d;
 }
 
-/* Sekundární tlačítko */
 .btn-secondary {
     background-color: transparent;
     border: 2px solid;
 }
 
-/* V Hero sekci (Bílý obrys) */
 .hero .btn-secondary {
     color: white;
     border-color: white;
@@ -277,7 +282,6 @@ body {
     color: #166534;
 }
 
-/* Mimo Hero sekci (Zelený obrys) */
 main section:not(.hero) .btn-secondary {
     color: #166534;
     border-color: #166534;
@@ -287,7 +291,6 @@ main section:not(.hero) .btn-secondary:hover {
     color: white;
 }
 
-/* CTA v patičce nebo jinde */
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -323,11 +326,10 @@ main section:not(.hero) .btn-secondary:hover {
 }
 
 .stat-label {
-    font-size: 1.125rem;
+    font-size: 0.9rem;
     color: #15803d;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.9rem;
     letter-spacing: 1px;
 }
 
@@ -408,7 +410,7 @@ main section:not(.hero) .btn-secondary:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -3.5rem auto 1rem; /* Posun nahoru přes obrázek */
+    margin: -3.5rem auto 1rem;
     position: relative;
     border: 4px solid white;
     z-index: 2;
@@ -432,7 +434,7 @@ main section:not(.hero) .btn-secondary:hover {
 }
 
 /* =========================================
-   7. Page Headers (About, Contact, etc.)
+   7. Page Headers
    ========================================= */
 .page-header {
     background: linear-gradient(135deg, #059669, #047857);
@@ -454,7 +456,7 @@ main section:not(.hero) .btn-secondary:hover {
 }
 
 /* =========================================
-   8. Specific Layouts (Grid, Legacy, Contact)
+   8. Layouts (Content, Contact, etc.)
    ========================================= */
 .content-grid {
     display: grid;
@@ -475,7 +477,6 @@ main section:not(.hero) .btn-secondary:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Legacy Section */
 .legacy {
     background-color: #f9fafb;
 }
@@ -496,7 +497,6 @@ main section:not(.hero) .btn-secondary:hover {
     margin-bottom: 2rem;
 }
 
-/* Contact Grid */
 .contact-grid, .locations-grid, .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -528,7 +528,6 @@ main section:not(.hero) .btn-secondary:hover {
     margin-bottom: 1rem;
 }
 
-/* Project Status Labels */
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -574,7 +573,7 @@ main section:not(.hero) .btn-secondary:hover {
    9. Footer
    ========================================= */
 .footer {
-    background-color: #064e3b; /* Velmi tmavá zelená */
+    background-color: #064e3b;
     color: white;
     padding: 4rem 0 2rem;
     margin-top: auto;
@@ -606,6 +605,11 @@ main section:not(.hero) .btn-secondary:hover {
    10. Mobile & Responsive Logic
    ========================================= */
 @media (max-width: 768px) {
+    /* Logo adjustment for mobile */
+    .logo-image {
+        height: 3rem; /* Menší logo na mobilu */
+    }
+
     /* Mobile Menu Styling */
     .nav-menu {
         display: none;
@@ -640,7 +644,6 @@ main section:not(.hero) .btn-secondary:hover {
         display: flex;
     }
     
-    /* Hamburger Animation */
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -651,16 +654,11 @@ main section:not(.hero) .btn-secondary:hover {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Content Adjustments */
     .hero-title {
         font-size: 2.5rem;
     }
     
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-grid, .features-grid {
+    .content-grid, .contact-grid, .features-grid {
         grid-template-columns: 1fr;
     }
     
@@ -690,11 +688,10 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Image Placeholder (Fallback) */
 img[src=""], img:not([src]) {
     visibility: hidden;
 }
 
 .page-image, .card-image {
-    background-color: #e5e7eb; /* Šedé pozadí při načítání */
-}
+    background-color: #e5e7eb;
+   }
