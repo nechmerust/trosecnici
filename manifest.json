@@ -1,0 +1,20 @@
+{
+  "name": "ČSOP Trosečníci",
+  "short_name": "Trosečníci",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#166534",
+  "theme_color": "#166534",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
