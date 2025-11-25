@@ -861,3 +861,161 @@ img[src=""], img:not([src]) {
         grid-template-columns: 1fr; /* Na mobilu jeden sloupec */
     }
 }
+/* =========================================
+   STYLY PRO STRÁNKU PROJEKTY
+   ========================================= */
+
+/* --- 1. Sekce Dokončené projekty --- */
+.projects-section {
+    margin-bottom: 4rem;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Mřížka pro dokončené projekty */
+.completed-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Karta dokončeného projektu */
+.completed-project {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.completed-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-color: #16a34a;
+}
+
+/* Ikonka s "fajfkou" */
+.completed-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #dcfce7;
+    color: #16a34a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.completed-content h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.completed-content p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Aby se rok zarovnal dolů, pokud je text krátký */
+}
+
+/* Štítek s rokem */
+.completed-year {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    align-self: flex-start;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* --- 2. Sekce Jak se zapojit (Involvement) --- */
+.involvement-section {
+    padding: 3rem 0;
+    background-color: #f9fafb; /* Jemně šedé pozadí pro odlišení */
+    border-radius: 1rem;
+    margin-top: 4rem;
+}
+
+.involvement-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #166534;
+}
+
+.involvement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.involvement-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.involvement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.involvement-card i {
+    font-size: 3rem;
+    color: #16a34a;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.involvement-card h4 {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.involvement-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* --- Responzivní úprava pro mobily --- */
+@media (max-width: 768px) {
+    .completed-projects, 
+    .involvement-grid {
+        grid-template-columns: 1fr; /* Na mobilu pod sebou */
+        gap: 1.5rem;
+    }
+    
+    .completed-project, 
+    .involvement-card {
+        padding: 1.5rem;
+    }
+}
