@@ -4,279 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekty - ČSOP Trosečníci</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
+        <!-- Standard Nav -->
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="ČSOP Trosečníci Logo" class="logo-image">
-                    <span>ČSOP Trosečníci</span>
-                </a>
-            </div>
-                        <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link" data-cs="Úvod" data-en="Home">Úvod</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link" data-cs="O nás" data-en="About Us">O nás</a>
-                </li>
-                <li class="nav-item">
-                    <a href="locations.html" class="nav-link" data-cs="Lokality, biocentra" data-en="Locations, Biocenters">Lokality, biocentra</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link" data-cs="Projekty" data-en="Projects">Projekty</a>
-                </li>
-                <li class="nav-item">
-                    <a href="karel.html" class="nav-link" data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</a>
-                </li>
-                <li class="nav-item">
-                    <a href="letter.html" class="nav-link" data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link" data-cs="Kontakt" data-en="Contact">Kontakt</a>
-                </li>
-                <li class="nav-item language-switcher">
-                    <button id="lang-toggle" class="lang-btn">
-                        <span class="lang-text">CS</span>
-                    </button>
-                </li>
+            <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="Logo" class="logo-image"><span>ČSOP Trosečníci</span></a></div>
+            <ul class="nav-menu">
+               <li><a href="index.html" class="nav-link">Úvod</a></li>
+               <li><a href="projects.html" class="nav-link active">Projekty</a></li>
+               <!-- zbytek menu -->
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 data-cs="Projekty" data-en="Projects">Projekty</h1>
-                <p data-cs="Naše aktivity a projekty na ochranu přírody" data-en="Our activities and nature conservation projects">
-                    Naše aktivity a projekty na ochranu přírody
-                </p>
-            </div>
-        </section>
-
-        <!-- Page Content -->
-        <section class="page-content">
-            <div class="container">
-                <!-- Current Projects -->
-                <div class="projects-section">
-                    <div class="section-image">
-                        <img src="images/current-projects.jpg" alt="Aktuální projekty ČSOP Trosečníci" class="page-image">
-                    </div>
-                    <h2 data-cs="Aktuální projekty" data-en="Current Projects">Aktuální projekty</h2>
-                    <div class="projects-grid">
-                        <div class="project-card featured">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-tint"></i>
-                                </div>
-                                <div class="project-status active">
-                                    <span data-cs="Probíhá" data-en="Ongoing">Probíhá</span>
-                                </div>
-                            </div>
-                            <h3 data-cs="Obnova mokřadních biotopů" data-en="Wetland Habitat Restoration">Obnova mokřadních biotopů</h3>
-                            <p data-cs="Komplexní projekt zaměřený na obnovu a revitalizaci mokřadních ekosystémů v regionu. Zahrnuje odstraňování invazních druhů, obnovu vodního režimu a monitoring biodiverzity." data-en="Comprehensive project focused on restoration and revitalization of wetland ecosystems in the region. Includes removal of invasive species, restoration of water regime and biodiversity monitoring.">
-                                Komplexní projekt zaměřený na obnovu a revitalizaci mokřadních ekosystémů v regionu. Zahrnuje odstraňování invazních druhů, obnovu vodního režimu a monitoring biodiverzity.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span data-cs="Doba trvání: 2023-2025" data-en="Duration: 2023-2025">Doba trvání: 2023-2025</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span data-cs="Lokality: 5 mokřadů" data-en="Locations: 5 wetlands">Lokality: 5 mokřadů</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card featured">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-dove"></i>
-                                </div>
-                                <div class="project-status active">
-                                    <span data-cs="Probíhá" data-en="Ongoing">Probíhá</span>
-                                </div>
-                            </div>
-                            <h3 data-cs="Monitoring ptačích populací" data-en="Bird Population Monitoring">Monitoring ptačích populací</h3>
-                            <p data-cs="Dlouhodobý monitoring ptačích druhů a jejich hnízdišť v chráněných územích. Projekt zahrnuje pravidelné sčítání, kroužkování a sledování migračních tras." data-en="Long-term monitoring of bird species and their nesting sites in protected areas. The project includes regular counts, ringing and tracking migration routes.">
-                                Dlouhodobý monitoring ptačích druhů a jejich hnízdišť v chráněných územích. Projekt zahrnuje pravidelné sčítání, kroužkování a sledování migračních tras.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span data-cs="Doba trvání: Dlouhodobě" data-en="Duration: Long-term">Doba trvání: Dlouhodobě</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-binoculars"></i>
-                                    <span data-cs="Sledované druhy: 45+" data-en="Monitored species: 45+">Sledované druhy: 45+</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-seedling"></i>
-                                </div>
-                                <div class="project-status planning">
-                                    <span data-cs="Plánováno" data-en="Planned">Plánováno</span>
-                                </div>
-                            </div>
-                            <h3 data-cs="Obnova původních lesních porostů" data-en="Native Forest Stand Restoration">Obnova původních lesních porostů</h3>
-                            <p data-cs="Projekt na obnovu původních smíšených lesů s důrazem na autochtonní druhy. Zahrnuje výsadbu původních dřevin a postupné nahrazování monokultur." data-en="Project for restoration of original mixed forests with emphasis on autochthonous species. Includes planting of native trees and gradual replacement of monocultures.">
-                                Projekt na obnovu původních smíšených lesů s důrazem na autochtonní druhy. Zahrnuje výsadbu původních dřevin a postupné nahrazování monokultur.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span data-cs="Start: 2024" data-en="Start: 2024">Start: 2024</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-tree"></i>
-                                    <span data-cs="Plocha: 15 ha" data-en="Area: 15 ha">Plocha: 15 ha</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="project-status active">
-                                    <span data-cs="Probíhá" data-en="Ongoing">Probíhá</span>
-                                </div>
-                            </div>
-                            <h3 data-cs="Vzdělávací program pro školy" data-en="Educational Program for Schools">Vzdělávací program pro školy</h3>
-                            <p data-cs="Interaktivní vzdělávací program pro základní a střední školy zaměřený na ochranu přírody a biodiverzity. Zahrnuje exkurze, workshopy a praktické aktivity." data-en="Interactive educational program for primary and secondary schools focused on nature conservation and biodiversity. Includes excursions, workshops and practical activities.">
-                                Interaktivní vzdělávací program pro základní a střední školy zaměřený na ochranu přírody a biodiverzity. Zahrnuje exkurze, workshopy a praktické aktivity.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span data-cs="Účastníci: 200+ žáků ročně" data-en="Participants: 200+ students annually">Účastníci: 200+ žáků ročně</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-school"></i>
-                                    <span data-cs="Školy: 8 partnerských" data-en="Schools: 8 partners">Školy: 8 partnerských</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Completed Projects -->
-                <div class="projects-section">
-                    <h2 data-cs="Dokončené projekty" data-en="Completed Projects">Dokončené projekty</h2>
-                    <div class="completed-projects">
-                        <div class="completed-project">
-                            <div class="completed-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="completed-content">
-                                <h4 data-cs="Revitalizace rašeliniště Na Kopci" data-en="Na Kopci Peat Bog Revitalization">Revitalizace rašeliniště Na Kopci</h4>
-                                <p data-cs="Úspěšně dokončená obnova vzácného rašelinného biotopu včetně odstranění dřevin a obnovy vodního režimu." data-en="Successfully completed restoration of rare peat bog habitat including tree removal and water regime restoration.">
-                                    Úspěšně dokončená obnova vzácného rašelinného biotopu včetně odstranění dřevin a obnovy vodního režimu.
-                                </p>
-                                <span class="completed-year" data-cs="Dokončeno: 2022" data-en="Completed: 2022">Dokončeno: 2022</span>
-                            </div>
-                        </div>
-
-                        <div class="completed-project">
-                            <div class="completed-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="completed-content">
-                                <h4 data-cs="Instalace informačních tabulí" data-en="Information Board Installation">Instalace informačních tabulí</h4>
-                                <p data-cs="Vytvoření a instalace vzdělávacích tabulí v přírodních rezervacích pro lepší informovanost návštěvníků." data-en="Creation and installation of educational boards in nature reserves for better visitor information.">
-                                    Vytvoření a instalace vzdělávacích tabulí v přírodních rezervacích pro lepší informovanost návštěvníků.
-                                </p>
-                                <span class="completed-year" data-cs="Dokončeno: 2021" data-en="Completed: 2021">Dokončeno: 2021</span>
-                            </div>
-                        </div>
-
-                        <div class="completed-project">
-                            <div class="completed-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="completed-content">
-                                <h4 data-cs="Mapování vzácných druhů" data-en="Rare Species Mapping">Mapování vzácných druhů</h4>
-                                <p data-cs="Komplexní inventarizace flóry a fauny v chráněných územích s vytvořením digitální databáze nálezů." data-en="Comprehensive inventory of flora and fauna in protected areas with creation of digital findings database.">
-                                    Komplexní inventarizace flóry a fauny v chráněných územích s vytvořením digitální databáze nálezů.
-                                </p>
-                                <span class="completed-year" data-cs="Dokončeno: 2020" data-en="Completed: 2020">Dokončeno: 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- How to Get Involved -->
-                <div class="involvement-section">
-                    <h2 data-cs="Jak se zapojit" data-en="How to Get Involved">Jak se zapojit</h2>
-                    <div class="involvement-grid">
-                        <div class="involvement-card">
-                            <i class="fas fa-hands-helping"></i>
-                            <h4 data-cs="Dobrovolnická práce" data-en="Volunteer Work">Dobrovolnická práce</h4>
-                            <p data-cs="Připojte se k našim terénním aktivitám a pomozte s praktickou ochranou přírody." data-en="Join our field activities and help with practical nature conservation.">
-                                Připojte se k našim terénním aktivitám a pomozte s praktickou ochranou přírody.
-                            </p>
-                        </div>
-                        <div class="involvement-card">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4 data-cs="Návrhy projektů" data-en="Project Proposals">Návrhy projektů</h4>
-                            <p data-cs="Máte nápad na nový projekt? Rádi si s vámi promluvíme o možnostech realizace." data-en="Do you have an idea for a new project? We'd be happy to discuss implementation possibilities with you.">
-                                Máte nápad na nový projekt? Rádi si s vámi promluvíme o možnostech realizace.
-                            </p>
-                        </div>
-                        <div class="involvement-card">
-                            <i class="fas fa-donate"></i>
-                            <h4 data-cs="Finanční podpora" data-en="Financial Support">Finanční podpora</h4>
-                            <p data-cs="Vaše dary nám umožňují realizovat více projektů a rozšiřovat naše aktivity." data-en="Your donations enable us to implement more projects and expand our activities.">
-                                Vaše dary nám umožňují realizovat více projektů a rozšiřovat naše aktivity.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="page-header">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ZO ČSOP Trosečníci</h3>
-                    <p data-cs="IČO: 64772390" data-en="ID: 64772390">IČO: 64772390</p>
-                    <p>Email: csoptrosecnici@seznam.cz</p>
-                    <p data-cs="Číslo účtu: 236201335 / 0300" data-en="Account Number: 236201335 / 0300">Číslo účtu: 236201335 / 0300</p>
+            <h1 data-cs="Naše Projekty" data-en="Our Projects">Naše Projekty</h1>
+            <p data-cs="Aktuální činnost v terénu" data-en="Current fieldwork">Aktuální činnost v terénu</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <img src="images/current-projects.jpg" alt="Projekty" class="page-image" style="margin-bottom: 3rem;">
+            
+            <h2 class="section-header" data-cs="Běžící projekty" data-en="Ongoing Projects">Běžící projekty</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-tint"></i></div>
+                        <span class="project-status status-active" data-cs="Probíhá" data-en="Active">Probíhá</span>
+                    </div>
+                    <h3 data-cs="Obnova mokřadů" data-en="Wetland Restoration">Obnova mokřadů</h3>
+                    <p data-cs="Revitalizace vodního režimu a podpora biodiverzity." data-en="Revitalization of water regime.">Revitalizace vodního režimu a podpora biodiverzity.</p>
                 </div>
-                <div class="footer-section">
-                    <p data-cs="Nabízíme komentovanou prohlídku ostrovské přírody" data-en="We offer guided tours of Ostrov's nature">
-                        Nabízíme komentovanou prohlídku ostrovské přírody
-                    </p>
-                    <p data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">
-                        Hledáme dobrovolníky, sponzory, kolegy
-                    </p>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-dove"></i></div>
+                        <span class="project-status status-active" data-cs="Probíhá" data-en="Active">Probíhá</span>
+                    </div>
+                    <h3 data-cs="Monitoring ptactva" data-en="Bird Monitoring">Monitoring ptactva</h3>
+                    <p data-cs="Pravidelné sčítání a kroužkování." data-en="Regular counting and ringing.">Pravidelné sčítání a kroužkování.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-seedling"></i></div>
+                        <span class="project-status status-planned" data-cs="Plánováno" data-en="Planned">Plánováno</span>
+                    </div>
+                    <h3 data-cs="Obnova lesa" data-en="Forest Restoration">Obnova lesa</h3>
+                    <p data-cs="Výsadba původních dřevin." data-en="Planting native trees.">Výsadba původních dřevin.</p>
+                </div>
+            </div>
+
+            <h2 class="section-header" style="margin-top: 4rem;" data-cs="Dokončeno" data-en="Completed">Dokončeno</h2>
+            <div class="completed-projects">
+                <div class="completed-item">
+                    <i class="fas fa-check-circle" style="color: green; font-size: 1.5rem;"></i>
+                    <div>
+                        <h4>Rašeliniště Na Kopci</h4>
+                        <p>Revitalizace 2022</p>
+                    </div>
+                </div>
+                <div class="completed-item">
+                    <i class="fas fa-check-circle" style="color: green; font-size: 1.5rem;"></i>
+                    <div>
+                        <h4>Informační tabule</h4>
+                        <p>Instalace 2021</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
+    <footer class="footer">
+        <div class="container footer-content">
+             <div class="footer-section"><h3>ČSOP Trosečníci</h3></div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
