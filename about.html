@@ -4,93 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O nás - ČSOP Trosečníci</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="Logo" class="logo-image">
+                    <img src="images/logo.png" alt="ČSOP Trosečníci Logo" class="logo-image">
                     <span>ČSOP Trosečníci</span>
                 </a>
             </div>
             <ul class="nav-menu">
-                <!-- Stejné menu jako v index.html -->
-                <li><a href="index.html" class="nav-link" data-cs="Úvod" data-en="Home">Úvod</a></li>
-                <li><a href="about.html" class="nav-link active" data-cs="O nás" data-en="About Us">O nás</a></li>
-                <li><a href="locations.html" class="nav-link" data-cs="Lokality" data-en="Locations">Lokality</a></li>
-                <li><a href="projects.html" class="nav-link" data-cs="Projekty" data-en="Projects">Projekty</a></li>
-                <li><a href="karel.html" class="nav-link" data-cs="O Charliem" data-en="About Charlie">O Charliem</a></li>
-                <li><a href="letter.html" class="nav-link" data-cs="Dopis" data-en="Letter">Dopis</a></li>
-                <li><a href="contact.html" class="nav-link" data-cs="Kontakt" data-en="Contact">Kontakt</a></li>
-                <li class="language-switcher">
+                <li class="nav-item"><a href="index.html" class="nav-link" data-cs="Úvod" data-en="Home">Úvod</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active" data-cs="O nás" data-en="About Us">O nás</a></li>
+                <li class="nav-item"><a href="locations.html" class="nav-link" data-cs="Lokality, biocentra" data-en="Locations, Biocenters">Lokality, biocentra</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link" data-cs="Projekty" data-en="Projects">Projekty</a></li>
+                <li class="nav-item"><a href="karel.html" class="nav-link" data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</a></li>
+                <li class="nav-item"><a href="letter.html" class="nav-link" data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" data-cs="Kontakt" data-en="Contact">Kontakt</a></li>
+                <li class="nav-item language-switcher">
                     <button id="lang-toggle" class="lang-btn"><span class="lang-text">CS</span></button>
                 </li>
             </ul>
-            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 data-cs="O nás" data-en="About Us">O nás</h1>
-            <p data-cs="Kdo jsme a kam směřujeme" data-en="Who we are and where we are going">Kdo jsme a kam směřujeme</p>
-        </div>
-    </section>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 data-cs="O nás" data-en="About Us">O nás</h1>
+                <p data-cs="Základní organizace Českého svazu ochránců přírody" data-en="Local organization of the Czech Union for Nature Conservation">
+                    Základní organizace Českého svazu ochránců přírody
+                </p>
+            </div>
+        </section>
 
-    <section class="page-content">
-        <div class="container">
-            <div class="content-grid">
-                <div class="about-image">
-                    <img src="images/team-work.jpg" alt="Tým" class="page-image">
+        <section class="page-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="about-image">
+                        <img src="images/team-work.jpg" alt="Tým ČSOP Trosečníci při práci" class="page-image">
+                    </div>
+                    <div class="content-text">
+                        <h2 data-cs="Naše mise" data-en="Our Mission">Naše mise</h2>
+                        <p data-cs="ČSOP Trosečníci je základní organizace Českého svazu ochránců přírody, která se věnuje ochraně přírody a krajiny v regionu Ostrova u Lanškrouna. Naše činnost zahrnuje praktickou ochranu přírody, vzdělávání veřejnosti a propagaci ekologického myšlení." data-en="ČSOP Trosečníci is a local organization of the Czech Union for Nature Conservation, dedicated to protecting nature and landscape in the Ostrov u Lanškroun region. Our activities include practical nature conservation, public education, and promoting ecological thinking.">
+                            ČSOP Trosečníci je základní organizace Českého svazu ochránců přírody, která se věnuje ochraně přírody a krajiny v regionu Ostrova u Lanškrouna. Naše činnost zahrnuje praktickou ochranu přírody, vzdělávání veřejnosti a propagaci ekologického myšlení.
+                        </p>
+
+                        <h2 data-cs="Naše hodnoty" data-en="Our Values">Naše hodnoty</h2>
+                        <p data-cs="Věříme v důležitost zachování biodiverzity a přírodních ekosystémů pro budoucí generace. Naše práce je založena na vědeckých poznatcích, respektu k přírodě a spolupráci s místní komunitou." data-en="We believe in the importance of preserving biodiversity and natural ecosystems for future generations. Our work is based on scientific knowledge, respect for nature, and cooperation with the local community.">
+                            Věříme v důležitost zachování biodiverzity a přírodních ekosystémů pro budoucí generace. Naše práce je založena na vědeckých poznatcích, respektu k přírodě a spolupráci s místní komunitou.
+                        </p>
+
+                        <h2 data-cs="Historie organizace" data-en="Organization History">Historie organizace</h2>
+                        <p data-cs="Organizace byla založena s cílem chránit unikátní přírodní hodnoty ostrovské kotliny. Od svého vzniku se věnujeme systematické ochraně místních biotopů, monitoring flóry a fauny a vzdělávací činnosti." data-en="The organization was founded with the goal of protecting the unique natural values of the Ostrov basin. Since its inception, we have been dedicated to systematic protection of local biotopes, monitoring flora and fauna, and educational activities.">
+                            Organizace byla založena s cílem chránit unikátní přírodní hodnoty ostrovské kotliny. Od svého vzniku se věnujeme systematické ochraně místních biotopů, monitoring flóry a fauny a vzdělávací činnosti.
+                        </p>
+                    </div>
                 </div>
-                <div class="content-text">
-                    <h2 data-cs="Naše mise" data-en="Our Mission">Naše mise</h2>
-                    <p data-cs="Jsme základní organizace ČSOP věnující se ochraně přírody v regionu Ostrova u Lanškrouna. Chráníme biotopy, vzděláváme veřejnost a zapojujeme komunitu." data-en="We are a local organization dedicated to nature conservation in Ostrov region. We protect habitats and educate the public.">
-                        Jsme základní organizace ČSOP věnující se ochraně přírody v regionu Ostrova u Lanškrouna. Chráníme biotopy, vzděláváme veřejnost a zapojujeme komunitu.
-                    </p>
-                    <h2 data-cs="Historie" data-en="History">Historie</h2>
-                    <p data-cs="Organizace byla založena s cílem chránit unikátní hodnoty ostrovské kotliny. Navazujeme na odkaz Karla Málka." data-en="Founded to protect the unique values of the Ostrov basin, building on Karel Málek's legacy.">
-                        Organizace byla založena s cílem chránit unikátní hodnoty ostrovské kotliny. Navazujeme na odkaz Karla Málka.
-                    </p>
+
+                <div class="team-section" style="margin-top: 5rem;">
+                    <div class="section-header">
+                        <h2 data-cs="Jak můžete pomoci" data-en="How You Can Help">Jak můžete pomoci</h2>
+                    </div>
+                    <div class="help-grid">
+                        <div class="help-card">
+                            <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
+                            <h3 data-cs="Dobrovolnictví" data-en="Volunteering">Dobrovolnictví</h3>
+                            <p data-cs="Připojte se k našim aktivitám v terénu, pomáhejte s údržbou lokalit a monitoring přírody." data-en="Join our field activities, help with site maintenance and nature monitoring.">
+                                Připojte se k našim aktivitám v terénu, pomáhejte s údržbou lokalit a monitoring přírody.
+                            </p>
+                        </div>
+                        <div class="help-card">
+                            <div class="feature-icon"><i class="fas fa-euro-sign"></i></div>
+                            <h3 data-cs="Finanční podpora" data-en="Financial Support">Finanční podpora</h3>
+                            <p data-cs="Vaše dary nám pomáhají financovat ochranné projekty a nákup potřebného vybavení." data-en="Your donations help us finance conservation projects and purchase necessary equipment.">
+                                Vaše dary nám pomáhají financovat ochranné projekty a nákup potřebného vybavení.
+                            </p>
+                        </div>
+                        <div class="help-card">
+                            <div class="feature-icon"><i class="fas fa-share-alt"></i></div>
+                            <h3 data-cs="Šíření povědomí" data-en="Raising Awareness">Šíření povědomí</h3>
+                            <p data-cs="Pomozte nám šířit povědomí o důležitosti ochrany přírody ve vašem okolí." data-en="Help us raise awareness about the importance of nature conservation in your area.">
+                                Pomozte nám šířit povědomí o důležitosti ochrany přírody ve vašem okolí.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="section-header" style="margin-top: 4rem;">
-                <h2 data-cs="Jak pomáháme" data-en="How we help">Jak pomáháme</h2>
-            </div>
-
-            <div class="help-grid">
-                <div class="help-card">
-                    <div class="help-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3 data-cs="Dobrovolnictví" data-en="Volunteering">Dobrovolnictví</h3>
-                    <p data-cs="Údržba lokalit a monitoring." data-en="Site maintenance and monitoring.">Údržba lokalit a monitoring.</p>
-                </div>
-                <div class="help-card">
-                    <div class="help-icon"><i class="fas fa-tree"></i></div>
-                    <h3 data-cs="Ochrana" data-en="Protection">Ochrana</h3>
-                    <p data-cs="Praktická péče o rezervace." data-en="Practical care for reserves.">Praktická péče o rezervace.</p>
-                </div>
-                <div class="help-card">
-                    <div class="help-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3 data-cs="Osvěta" data-en="Awareness">Osvěta</h3>
-                    <p data-cs="Šíření povědomí o přírodě." data-en="Spreading awareness about nature.">Šíření povědomí o přírodě.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer viz index.html -->
     <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-section">
-                <h3>ZO ČSOP Trosečníci</h3>
-                <p>Email: csoptrosecnici@seznam.cz</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZO ČSOP Trosečníci</h3>
+                    <p data-cs="IČO: 64772390" data-en="ID: 64772390">IČO: 64772390</p>
+                    <p>Email: csoptrosecnici@seznam.cz</p>
+                    <p data-cs="Číslo účtu: 236201335 / 0300" data-en="Account Number: 236201335 / 0300">Číslo účtu: 236201335 / 0300</p>
+                </div>
+                <div class="footer-section">
+                    <p data-cs="Nabízíme komentovanou prohlídku ostrovské přírody" data-en="We offer guided tours of Ostrov's nature">Nabízíme komentovanou prohlídku ostrovské přírody</p>
+                    <p data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">Hledáme dobrovolníky, sponzory, kolegy</p>
+                </div>
             </div>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
