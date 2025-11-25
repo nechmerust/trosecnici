@@ -1,73 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Mobile Menu Logic ---
+    // 1. Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    if (hamburger && navMenu) {
+    if (hamburger) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            
+            // Animate hamburger bars
+            const bars = hamburger.querySelectorAll('.bar');
+            if (hamburger.classList.contains('active')) {
+                bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
         });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
     }
 
-    // --- 2. Active Link Highlighting ---
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            const bars = hamburger.querySelectorAll('.bar');
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
+        });
     });
 
-    // --- 3. Language Switcher Logic ---
+    // 2. Language Switcher (CS/EN)
     const langBtn = document.getElementById('lang-toggle');
     const langText = document.querySelector('.lang-text');
     let currentLang = localStorage.getItem('csop_lang') || 'cs';
 
-    function updateContent(lang) {
-        // Update all elements with data attributes
-        document.querySelectorAll(`[data-${lang}]`).forEach(element => {
-            element.textContent = element.getAttribute(`data-${lang}`);
+    function updateLanguage() {
+        // Update elements with data-cs/data-en attributes
+        document.querySelectorAll('[data-cs]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${currentLang}`);
         });
 
-        // Update HTML lang attribute
-        document.documentElement.lang = lang;
-
-        // Update Button Text
+        // Update button text
         if (langText) {
-            langText.textContent = lang.toUpperCase();
+            langText.textContent = currentLang.toUpperCase();
         }
 
         // Save preference
-        localStorage.setItem('csop_lang', lang);
-        currentLang = lang;
+        localStorage.setItem('csop_lang', currentLang);
     }
 
-    // Initialize Language
-    updateContent(currentLang);
-
-    // Toggle Button Click
     if (langBtn) {
         langBtn.addEventListener('click', () => {
-            const newLang = currentLang === 'cs' ? 'en' : 'cs';
-            updateContent(newLang);
+            currentLang = currentLang === 'cs' ? 'en' : 'cs';
+            updateLanguage();
         });
     }
 
-    // --- 4. Service Worker Registration (PWA) ---
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js')
-                .then(registration => {
-                    console.log('ServiceWorker registration successful');
-                }, err => {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-        });
-    }
+    // Initialize language on load
+    updateLanguage();
+
+    // 3. Highlight Active Link
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
 });
