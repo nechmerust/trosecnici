@@ -3,241 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Karlu Málkovi - ČSOP Trosečníci</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Karel Málek - ČSOP Trosečníci</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="ČSOP Trosečníci Logo" class="logo-image">
-                    <span>ČSOP Trosečníci</span>
-                </a>
-            </div>
-                        <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link" data-cs="Úvod" data-en="Home">Úvod</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link" data-cs="O nás" data-en="About Us">O nás</a>
-                </li>
-                <li class="nav-item">
-                    <a href="locations.html" class="nav-link" data-cs="Lokality, biocentra" data-en="Locations, Biocenters">Lokality, biocentra</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link" data-cs="Projekty" data-en="Projects">Projekty</a>
-                </li>
-                <li class="nav-item">
-                    <a href="karel.html" class="nav-link" data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</a>
-                </li>
-                <li class="nav-item">
-                    <a href="letter.html" class="nav-link" data-cs="Charlieho dopis" data-en="Charlie's Letter">Charlieho dopis</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link" data-cs="Kontakt" data-en="Contact">Kontakt</a>
-                </li>
-                <li class="nav-item language-switcher">
-                    <button id="lang-toggle" class="lang-btn">
-                        <span class="lang-text">CS</span>
-                    </button>
-                </li>
+            <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="Logo" class="logo-image"><span>ČSOP Trosečníci</span></a></div>
+            <ul class="nav-menu">
+               <li><a href="index.html" class="nav-link">Úvod</a></li>
+               <li><a href="karel.html" class="nav-link active">O Charliem</a></li>
+               <!-- zbytek menu -->
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 data-cs="O Karlu Málkovi" data-en="About Karel Málek">O Karlu Málkovi</h1>
-                <p data-cs="Zakladatel a duchovní otec naší organizace" data-en="Founder and spiritual father of our organization">
-                    Zakladatel a duchovní otec naší organizace
-                </p>
-            </div>
-        </section>
-
-        <!-- Page Content -->
-        <section class="page-content">
-            <div class="container">
-                <!-- Memorial Section -->
-                <div class="memorial-section">
-                    <div class="memorial-content">
-                        <div class="memorial-text">
-                            <h2 data-cs="Karel Málek 'Charlie'" data-en="Karel Málek 'Charlie'">Karel Málek "Charlie"</h2>
-                            <p class="memorial-subtitle" data-cs="Zakladatel ČSOP Trosečníci" data-en="Founder of ČSOP Trosečníci">
-                                Zakladatel ČSOP Trosečníci
-                            </p>
-                            
-                            <div class="memorial-quote">
-                                <i class="fas fa-quote-left"></i>
-                                <blockquote data-cs="Příroda nepotřebuje člověka, ale člověk potřebuje přírodu. Naším úkolem je chránit to, co nám bylo svěřeno." data-en="Nature doesn't need humans, but humans need nature. Our task is to protect what has been entrusted to us.">
-                                    "Příroda nepotřebuje člověka, ale člověk potřebuje přírodu. Naším úkolem je chránit to, co nám bylo svěřeno."
-                                </blockquote>
-                                <cite>- Karel Málek</cite>
-                            </div>
-                        </div>
-                        
-                        <div class="memorial-icon">
-                            <img src="images/karel-malek-portrait.jpg" alt="Karel Málek - Charlie" class="memorial-portrait">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Biography Section -->
-                <div class="biography-section">
-                    <h2 data-cs="Životopis" data-en="Biography">Životopis</h2>
-                    
-                    <div class="biography-content">
-                        <p data-cs="Karel Málek, přezdívaný 'Charlie', byl výjimečnou osobností, která zasvětila svůj život ochraně přírody v ostrovské kotlině. Narodil se v roce 1945 a od mládí projevoval hluboký zájem o přírodu a její ochranu." data-en="Karel Málek, nicknamed 'Charlie', was an exceptional personality who dedicated his life to protecting nature in the Ostrov basin. He was born in 1945 and showed a deep interest in nature and its protection from a young age.">
-                            Karel Málek, přezdívaný "Charlie", byl výjimečnou osobností, která zasvětila svůj život ochraně přírody v ostrovské kotlině. Narodil se v roce 1945 a od mládí projevoval hluboký zájem o přírodu a její ochranu.
-                        </p>
-
-                        <p data-cs="V roce 1989 založil základní organizaci ČSOP Trosečníci, kterou vedl až do své smrti. Pod jeho vedením se organizace stala respektovaným ochráncem přírody v regionu a iniciátorem mnoha úspěšných projektů." data-en="In 1989, he founded the local organization ČSOP Trosečníci, which he led until his death. Under his leadership, the organization became a respected nature protector in the region and initiator of many successful projects.">
-                            V roce 1989 založil základní organizaci ČSOP Trosečníci, kterou vedl až do své smrti. Pod jeho vedením se organizace stala respektovaným ochráncem přírody v regionu a iniciátorem mnoha úspěšných projektů.
-                        </p>
-
-                        <p data-cs="Charlie byl nejen teoretikem, ale především praktickým ochráncem přírody. Osobně se podílel na managementu chráněných území, organizoval dobrovolnické akce a neúnavně vzdělával veřejnost o významu ochrany biodiverzity." data-en="Charlie was not only a theorist, but primarily a practical nature conservationist. He personally participated in protected area management, organized volunteer actions and tirelessly educated the public about the importance of biodiversity conservation.">
-                            Charlie byl nejen teoretikem, ale především praktickým ochráncem přírody. Osobně se podílel na managementu chráněných území, organizoval dobrovolnické akce a neúnavně vzdělával veřejnost o významu ochrany biodiverzity.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Achievements Section -->
-                <div class="achievements-section">
-                    <h2 data-cs="Hlavní úspěchy" data-en="Major Achievements">Hlavní úspěchy</h2>
-                    
-                    <div class="achievements-grid">
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-seedling"></i>
-                            </div>
-                            <h4 data-cs="Založení organizace" data-en="Organization Foundation">Založení organizace</h4>
-                            <p data-cs="Založil ČSOP Trosečníci v roce 1989 a vybudoval ji v respektovanou ochranářskou organizaci." data-en="Founded ČSOP Trosečníci in 1989 and built it into a respected conservation organization.">
-                                Založil ČSOP Trosečníci v roce 1989 a vybudoval ji v respektovanou ochranářskou organizaci.
-                            </p>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4 data-cs="Ochrana rezervací" data-en="Reserve Protection">Ochrana rezervací</h4>
-                            <p data-cs="Inicioval vznik a aktivně chránil přírodní rezervace Třebovské stěny a Kaštánek." data-en="Initiated the creation and actively protected the Třebovské stěny and Kaštánek nature reserves.">
-                                Inicioval vznik a aktivně chránil přírodní rezervace Třebovské stěny a Kaštánek.
-                            </p>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4 data-cs="Vzdělávání veřejnosti" data-en="Public Education">Vzdělávání veřejnosti</h4>
-                            <p data-cs="Organizoval přednášky, exkurze a vzdělávací programy pro školy i širokou veřejnost." data-en="Organized lectures, excursions and educational programs for schools and the general public.">
-                                Organizoval přednášky, exkurze a vzdělávací programy pro školy i širokou veřejnost.
-                            </p>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h4 data-cs="Dokumentace přírody" data-en="Nature Documentation">Dokumentace přírody</h4>
-                            <p data-cs="Vytvořil rozsáhlou dokumentaci místní flóry a fauny, která slouží dodnes jako základ pro ochranné projekty." data-en="Created extensive documentation of local flora and fauna, which still serves as a basis for conservation projects today.">
-                                Vytvořil rozsáhlou dokumentaci místní flóry a fauny, která slouží dodnes jako základ pro ochranné projekty.
-                            </p>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h4 data-cs="Spolupráce s úřady" data-en="Cooperation with Authorities">Spolupráce s úřady</h4>
-                            <p data-cs="Navázal úzkou spolupráci s orgány ochrany přírody a místní samosprávou." data-en="Established close cooperation with nature protection authorities and local government.">
-                                Navázal úzkou spolupráci s orgány ochrany přírody a místní samosprávou.
-                            </p>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="achievement-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <h4 data-cs="Ocenění" data-en="Awards">Ocenění</h4>
-                            <p data-cs="Získal řadu ocenění za svou dlouholetou práci v oblasti ochrany přírody a životního prostředí." data-en="Received numerous awards for his long-term work in nature and environmental protection.">
-                                Získal řadu ocenění za svou dlouholetou práci v oblasti ochrany přírody a životního prostředí.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Legacy Section -->
-                <div class="legacy-section">
-                    <h2 data-cs="Charlieho odkaz" data-en="Charlie's Legacy">Charlieho odkaz</h2>
-                    
-                    <div class="legacy-content">
-                        <p data-cs="Karel Málek nás opustil, ale jeho odkaz žije dál v každém stromu, který pomohl zachránit, v každém mokřadu, který obnovil, a v každém člověku, kterého inspiroval k lásce k přírodě." data-en="Karel Málek left us, but his legacy lives on in every tree he helped save, in every wetland he restored, and in every person he inspired to love nature.">
-                            Karel Málek nás opustil, ale jeho odkaz žije dál v každém stromu, který pomohl zachránit, v každém mokřadu, který obnovil, a v každém člověku, kterého inspiroval k lásce k přírodě.
-                        </p>
-
-                        <p data-cs="Naše organizace pokračuje v jeho tradici s vědomím, že nejlepším způsobem, jak uctít jeho památku, je pokračovat v práci, kterou začal. Každý náš projekt, každá ochranná akce je pokračováním jeho životního díla." data-en="Our organization continues in his tradition with the knowledge that the best way to honor his memory is to continue the work he started. Every project we undertake, every conservation action is a continuation of his life's work.">
-                            Naše organizace pokračuje v jeho tradici s vědomím, že nejlepším způsobem, jak uctít jeho památku, je pokračovat v práci, kterou začal. Každý náš projekt, každá ochranná akce je pokračováním jeho životního díla.
-                        </p>
-
-                        <div class="legacy-quote">
-                            <p data-cs="'Charlie nás naučil, že ochrana přírody není jen o zákonech a nařízeních, ale především o lásce, respektu a porozumění. Jeho duch nás provází při každé naší činnosti.'" data-en="'Charlie taught us that nature conservation is not just about laws and regulations, but primarily about love, respect and understanding. His spirit accompanies us in all our activities.'">
-                                "Charlie nás naučil, že ochrana přírody není jen o zákonech a nařízeních, ale především o lásce, respektu a porozumění. Jeho duch nás provází při každé naší činnosti."
-                            </p>
-                            <cite data-cs="- Současní členové ČSOP Trosečníci" data-en="- Current members of ČSOP Trosečníci">- Současní členové ČSOP Trosečníci</cite>
-                        </div>
-
-                        <div class="memorial-actions">
-                            <a href="letter.html" class="btn btn-primary">
-                                <i class="fas fa-envelope"></i>
-                                <span data-cs="Přečíst Charlieho dopis" data-en="Read Charlie's Letter">Přečíst Charlieho dopis</span>
-                            </a>
-                            <a href="projects.html" class="btn btn-secondary">
-                                <i class="fas fa-seedling"></i>
-                                <span data-cs="Pokračovat v jeho díle" data-en="Continue His Work">Pokračovat v jeho díle</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="page-header">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ZO ČSOP Trosečníci</h3>
-                    <p data-cs="IČO: 64772390" data-en="ID: 64772390">IČO: 64772390</p>
-                    <p>Email: csoptrosecnici@seznam.cz</p>
-                    <p data-cs="Číslo účtu: 236201335 / 0300" data-en="Account Number: 236201335 / 0300">Číslo účtu: 236201335 / 0300</p>
+            <h1 data-cs="Karel 'Charlie' Málek" data-en="Karel 'Charlie' Málek">Karel "Charlie" Málek</h1>
+            <p data-cs="Zakladatel a duše organizace" data-en="Founder and soul of the organization">Zakladatel a duše organizace</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container text-centered-narrow">
+            <div class="memorial-section">
+                <div class="memorial-content">
+                    <div class="memorial-text">
+                        <h2>Vzpomínka</h2>
+                        <blockquote data-cs="Příroda nepotřebuje nás, my potřebujeme ji." data-en="Nature doesn't need us, we need nature.">
+                            "Příroda nepotřebuje nás, my potřebujeme ji."
+                        </blockquote>
+                        <p data-cs="Karel Málek, přezdívaný Charlie, zasvětil celý svůj život ochraně přírody Ostrova u Lanškrouna." data-en="Karel Málek dedicated his life to nature conservation.">
+                            Karel Málek, přezdívaný Charlie, zasvětil celý svůj život ochraně přírody Ostrova u Lanškrouna. Založil ČSOP Trosečníci a inspiroval generace ochránců.
+                        </p>
+                    </div>
+                    <img src="images/karel-malek-portrait.jpg" alt="Karel Málek" class="memorial-portrait">
                 </div>
-                <div class="footer-section">
-                    <p data-cs="Nabízíme komentovanou prohlídku ostrovské přírody" data-en="We offer guided tours of Ostrov's nature">
-                        Nabízíme komentovanou prohlídku ostrovské přírody
-                    </p>
-                    <p data-cs="Hledáme dobrovolníky, sponzory, kolegy" data-en="We are looking for volunteers, sponsors, colleagues">
-                        Hledáme dobrovolníky, sponzory, kolegy
-                    </p>
-                </div>
+            </div>
+
+            <h2 data-cs="Životopis" data-en="Biography">Životopis</h2>
+            <p>V roce 1989 založil naši organizaci. Byl to vizionář, který viděl hodnotu v místech, která ostatní přehlíželi. Jeho práce vedla k vyhlášení rezervací Třebovské stěny a U Kaštánku.</p>
+            
+            <div class="cta-buttons" style="margin-top: 2rem;">
+                <a href="letter.html" class="btn btn-primary" data-cs="Číst jeho dopis" data-en="Read his letter">Číst jeho dopis</a>
             </div>
         </div>
-    </footer>
+    </section>
 
+    <footer class="footer">
+        <div class="container footer-content"><div class="footer-section"><h3>ČSOP Trosečníci</h3></div></div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
