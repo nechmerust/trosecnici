@@ -1,22 +1,6 @@
 /* =========================================
-   1. Reset a Základní styly
+   1. Reset and Base Styles
    ========================================= */
-:root {
-    --primary-color: #166534;
-    --primary-hover: #14532d;
-    --secondary-color: #16a34a;
-    --accent-color: #86efac;
-    --bg-light: #f9fafb;
-    --bg-green-light: #f0fdf4;
-    --text-main: #374151;
-    --text-dark: #111827;
-    --white: #ffffff;
-    --border-color: #e5e7eb;
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --radius: 1rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,31 +10,23 @@
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
-    color: var(--text-main);
-    background-color: var(--white);
+    color: #374151;
+    background-color: #fff;
     -webkit-font-smoothing: antialiased;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
-    color: var(--text-dark);
+    color: #111827;
     line-height: 1.3;
-    font-weight: 700;
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Zvětšeno pro lepší čitelnost textových stránek */
 }
 
 a {
     text-decoration: none;
     color: inherit;
-}
-
-ul {
-    list-style: none;
 }
 
 .container {
@@ -59,17 +35,12 @@ ul {
     padding: 0 1.5rem;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 /* =========================================
-   2. Navigace
+   2. Navigation Styles
    ========================================= */
 .navbar {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
-    color: var(--white);
+    background: linear-gradient(135deg, #166534, #15803d);
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -86,24 +57,34 @@ img {
     height: 4.5rem;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .nav-logo a {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: var(--white);
+    color: white;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 .logo-image {
-    height: 3rem;
+    height: 3.5rem;
     width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    list-style: none;
+    margin-left: auto;
 }
 
 .nav-link {
@@ -113,11 +94,19 @@ img {
     transition: all 0.3s ease;
     font-weight: 500;
     font-size: 0.95rem;
+    white-space: nowrap;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: var(--white);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 700;
+    border-bottom: 2px solid #86efac;
 }
 
 .language-switcher {
@@ -129,7 +118,7 @@ img {
 .lang-btn {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    color: var(--white);
+    color: white;
     padding: 0.4rem 0.8rem;
     border-radius: 0.375rem;
     cursor: pointer;
@@ -138,8 +127,8 @@ img {
 }
 
 .lang-btn:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: white;
+    color: #166534;
 }
 
 .hamburger {
@@ -147,23 +136,28 @@ img {
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    padding: 5px;
 }
 
 .bar {
+    display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--white);
+    background-color: white;
+    transition: all 0.3s ease-in-out;
     border-radius: 3px;
-    transition: all 0.3s ease;
 }
 
 /* =========================================
-   3. Hero Sekce (Index)
+   3. Hero & Page Headers
    ========================================= */
 .hero {
     position: relative;
-    background: #2f3e46 url('images/hero-nature.jpg') center/cover no-repeat;
-    color: var(--white);
+    background-color: #2f3e46;
+    background-image: url('images/hero-nature.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
     padding: 8rem 0 6rem;
     text-align: center;
 }
@@ -171,21 +165,21 @@ img {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
 }
 
 .hero-content {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     z-index: 2;
 }
 
 .hero-icon {
-    width: 5rem;
-    height: 5rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -193,11 +187,12 @@ img {
     margin: 0 auto 1.5rem;
     border: 1px solid rgba(255,255,255,0.3);
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: #86efac;
 }
 
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
     margin-bottom: 1rem;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
@@ -205,263 +200,253 @@ img {
 .hero-subtitle {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     margin-bottom: 1.5rem;
-    color: var(--accent-color);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    color: #bbf7d0;
 }
 
 .hero-description {
     font-size: 1.125rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     color: #f0fdf4;
 }
 
-/* =========================================
-   4. Hlavičky podstránek (Page Header)
-   ========================================= */
 .page-header {
     background: linear-gradient(135deg, #059669, #047857);
-    color: var(--white);
-    padding: 4rem 0;
+    color: white;
+    padding: 5rem 0;
     text-align: center;
 }
 
 .page-header h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--white);
-    margin-bottom: 0.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 .page-header p {
     font-size: 1.25rem;
     color: #a7f3d0;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 /* =========================================
-   5. Obecné komponenty a Tlačítka
+   4. Buttons & Components
    ========================================= */
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     font-weight: 600;
-    cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    border: 2px solid var(--secondary-color);
+    background-color: #16a34a;
+    color: white;
+    border: 2px solid #16a34a;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(22, 163, 74, 0.4);
+    background-color: #15803d;
+    border-color: #15803d;
+    transform: translateY(-3px);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: #166534;
+    border: 2px solid #166534;
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: #166534;
+    color: white;
 }
 
-/* Hero variace tlačítek */
-.hero .btn-primary { background: var(--white); color: var(--primary-color); border-color: var(--white); }
-.hero .btn-secondary { color: var(--white); border-color: var(--white); }
-.hero .btn-secondary:hover { background: var(--white); color: var(--primary-color); }
-
-.hero-buttons, .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+.hero-buttons .btn-primary { background: white; color: #166534; border-color: white; }
+.hero-buttons .btn-secondary { color: white; border-color: white; }
+.hero-buttons .btn:hover { transform: translateY(-3px); }
 
 /* =========================================
-   6. Grid Systém a Karty (Sjednocené)
+   5. General Layout & Sections
    ========================================= */
-.page-content {
-    padding: 4rem 0;
+.page-content { padding: 4rem 0; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+
+/* Grid Systems */
+.content-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center; /* Center align image and text */
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header h2 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-/* Univerzální Grid */
-.features-grid, .projects-grid, .locations-grid, .contact-grid, .services-grid, .help-grid, .achievements-grid, .involvement-grid {
+.features-grid, .contact-grid, .locations-grid, .projects-grid, .involvement-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* Univerzální Karta */
-.feature-card, .project-card, .location-card, .contact-card, .service-card, .help-card, .achievement-card, .involvement-card {
-    background: var(--white);
-    border-radius: var(--radius);
+/* Cards */
+.feature-card, .contact-card, .location-card, .project-card, .involvement-card {
+    background: white;
     padding: 2rem;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
-.feature-card:hover, .project-card:hover, .location-card:hover, .contact-card:hover {
+.feature-card:hover, .contact-card:hover, .location-card:hover, .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--secondary-color);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* Ikony v kartách */
-.feature-icon, .project-icon, .location-icon, .contact-icon, .service-icon, .help-icon, .achievement-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: var(--bg-green-light);
-    color: var(--secondary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.card-image {
+/* Images */
+.page-image, .card-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
     border-radius: 0.5rem;
-    margin-bottom: 1.5rem;
+    object-fit: cover;
 }
+.card-image { height: 14rem; margin-bottom: 1.5rem; }
+.page-image { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-/* Specifika pro O nás a Dopis (Textové bloky) */
-.content-grid {
-    display: grid;
-    gap: 3rem;
-    align-items: center;
+/* Icons */
+.feature-icon, .contact-icon, .location-icon, .project-icon, .involvement-card i {
+    color: #16a34a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
-
-@media (min-width: 768px) {
-    .content-grid { grid-template-columns: 1fr 1fr; }
-}
-
-.page-image {
-    width: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-md);
-}
-
-.text-centered-narrow {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.text-centered-narrow p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+.feature-icon {
+    background: #f0fdf4;
+    width: 4rem; height: 4rem;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: -3.5rem auto 1rem;
+    border: 4px solid white;
 }
 
 /* =========================================
-   7. Specifické Sekce
+   6. Specific Pages Styling (OPRAVY)
    ========================================= */
 
-/* Stats (Index) */
-.stats {
-    padding: 3rem 0;
-    background-color: var(--bg-green-light);
-    border-bottom: 1px solid #dcfce7;
+/* --- About Page --- */
+.about-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
-.stats-grid {
+.help-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
     text-align: center;
-    gap: 1.5rem;
 }
-.stat-number { font-size: 2.5rem; font-weight: 800; color: var(--primary-color); }
-.stat-label { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; color: var(--secondary-color); }
+.help-card {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+}
 
-/* Karel & Legacy */
+/* --- Karel Page (Opravené třídy) --- */
 .memorial-section {
-    background-color: var(--bg-light);
+    margin-bottom: 4rem;
+    background-color: #f0fdf4;
     padding: 3rem;
-    border-radius: var(--radius);
-    margin-bottom: 3rem;
+    border-radius: 1rem;
+    border: 1px solid #dcfce7;
 }
+
 .memorial-content {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* Mobile first: text below image */
     gap: 2rem;
     align-items: center;
 }
-@media (min-width: 768px) {
-    .memorial-content { flex-direction: row; text-align: left; }
-    .memorial-text { flex: 1; }
-}
-.memorial-portrait {
+
+/* Sjednocení tříd pro fotku Karla Málka */
+.memorial-portrait, .memorial-photo {
     width: 250px;
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid var(--white);
-    box-shadow: var(--shadow-md);
-}
-blockquote {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: var(--text-dark);
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 1rem;
-    margin: 1.5rem 0;
+    border: 6px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* Dopis (Letter) */
-.letter-body {
-    background-color: #fffbf0; /* Papírová barva */
-    padding: 3rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-sm);
-    font-family: 'Georgia', serif;
-    line-height: 1.8;
-    color: #2c1810;
+.memorial-quote blockquote {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #166534;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin: 2rem 0;
-    border: 1px solid #f3e5ab;
 }
-.signature {
-    margin-top: 2rem;
-    text-align: right;
-    font-style: italic;
-    font-weight: bold;
+.achievement-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid #16a34a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Projekty */
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+/* --- Letter Page (Styl dopisu) --- */
+.letter-intro {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
+.letter-content {
+    background-color: #fffcf5; /* Barva papíru */
+    padding: 4rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Georgia', serif; /* Patkové písmo pro dopis */
+    color: #2c3e50;
+    line-height: 1.9;
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+.letter-header { margin-bottom: 3rem; }
+.letter-date { font-style: italic; color: #64748b; margin-bottom: 0.5rem; }
+.letter-salutation { font-weight: bold; font-size: 1.2rem; }
+.letter-paragraph { margin-bottom: 1.5rem; text-align: justify; }
+.letter-closing { margin-top: 3rem; }
+.signature-text { margin-bottom: 1rem; }
+.signature-name {
+    font-family: 'Segoe UI', sans-serif; /* Podpis zpět na bezpatkové, nebo kurzívu */
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #166534;
+}
+.letter-reflection {
+    margin-top: 4rem;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Projects Page --- */
 .project-status {
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
@@ -469,30 +454,42 @@ blockquote {
     font-weight: bold;
     text-transform: uppercase;
 }
-.status-active { background-color: #dcfce7; color: var(--primary-color); }
-.status-planned { background-color: #fef3c7; color: #92400e; }
+.project-status.active { background: #dcfce7; color: #166534; }
+.project-status.planning { background: #fef3c7; color: #92400e; }
 
 .completed-projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
 }
-.completed-item {
+.completed-project {
     display: flex;
     gap: 1rem;
-    background: var(--white);
+    background: white;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+}
+.completed-icon {
+    font-size: 1.5rem;
+    color: #16a34a;
+    flex-shrink: 0;
+}
+.completed-year {
+    display: inline-block;
+    font-size: 0.8rem;
+    background: #f3f4f6;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    color: #6b7280;
 }
 
 /* =========================================
-   8. Footer
+   7. Footer
    ========================================= */
 .footer {
     background-color: #064e3b;
-    color: var(--white);
+    color: white;
     padding: 4rem 0 2rem;
     margin-top: auto;
 }
@@ -502,43 +499,37 @@ blockquote {
     gap: 3rem;
 }
 .footer-section h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent-color);
+    color: #86efac;
     border-bottom: 2px solid rgba(134, 239, 172, 0.3);
     padding-bottom: 0.5rem;
     display: inline-block;
+    margin-bottom: 1.5rem;
 }
-.footer-section p { color: #d1fae5; font-size: 0.95rem; }
+.footer-section p { margin-bottom: 0.5rem; color: #d1fae5; }
 
 /* =========================================
-   9. Mobilní Responsivita
+   8. Media Queries
    ========================================= */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--primary-color);
-        flex-direction: column;
-        padding: 1rem;
-        display: none;
-        border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .nav-menu.active { display: flex; animation: slideDown 0.3s ease; }
-    .nav-link { width: 100%; text-align: center; padding: 0.75rem; }
-    .hamburger { display: flex; }
-    
-    .hero-title { font-size: 2.5rem; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
-    .page-header { padding: 3rem 0; }
-    
-    .memorial-content, .content-grid { flex-direction: column; }
-    .letter-body { padding: 1.5rem; }
+@media (min-width: 768px) {
+    .content-grid { grid-template-columns: 1fr 1fr; }
+    .hero-buttons { flex-direction: row; }
+    .memorial-content { flex-direction: row; text-align: left; }
+    .letter-intro { grid-template-columns: 1fr 2fr; align-items: center; }
 }
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background-color: #166534;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .nav-menu.active { display: flex; }
+    .nav-link { width: 100%; display: block; padding: 0.75rem 1rem; }
+    .hamburger { display: flex; }
+    .hero-title { font-size: 2.5rem; }
+    .letter-content { padding: 2rem 1.5rem; }
+    .project-header { flex-direction: column; gap: 0.5rem; }
    }
