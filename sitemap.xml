@@ -1,39 +1,71 @@
+[file name]: sitemap.xml
+[file content begin]
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
-    <loc>https://vasedomena.cz/index.html</loc>
+    <loc>https://vasedomena.cz/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/?lang=en" />
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  
   <url>
     <loc>https://vasedomena.cz/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/about.html?lang=en" />
+    <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
     <loc>https://vasedomena.cz/locations.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/locations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/locations.html?lang=en" />
+    <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
     <loc>https://vasedomena.cz/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/projects.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/projects.html?lang=en" />
+    <lastmod>2024-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  
   <url>
     <loc>https://vasedomena.cz/karel.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/karel.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/karel.html?lang=en" />
+    <lastmod>2024-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  
   <url>
     <loc>https://vasedomena.cz/letter.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/letter.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/letter.html?lang=en" />
+    <lastmod>2024-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  
   <url>
     <loc>https://vasedomena.cz/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://vasedomena.cz/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vasedomena.cz/contact.html?lang=en" />
+    <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  
 </urlset>
+[file content end]
