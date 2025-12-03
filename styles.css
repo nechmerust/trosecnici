@@ -1213,3 +1213,186 @@ section {
     }
 }
 [file content end]
+/* =========================================
+   VYLEPŠENÍ CELKOVÉHO DESIGNU
+   ========================================= */
+
+/* 1. Zlepšení kontrastu a čitelnosti */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1f2937; /* Tmavší šedá pro lepší čitelnost */
+    background-color: #ffffff;
+}
+
+/* 2. Vylepšení nadpisů */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+/* 3. Vylepšení karet a stínů */
+.feature-card, .contact-card, .location-card, .project-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover, .contact-card:hover, .location-card:hover, .project-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+    border-color: #86efac;
+}
+
+/* 4. Vylepšení tlačítek */
+.btn {
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #15803d, #166534);
+}
+
+/* 5. Vylepšení navigace */
+.navbar {
+    background: linear-gradient(135deg, #166534, #14532d);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #86efac;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* 6. Vylepšení hero sekce */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+                url('images/hero-nature.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax efekt */
+}
+
+.hero-title {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 7. Vylepšení footeru */
+.footer {
+    background: linear-gradient(135deg, #064e3b, #022c22);
+    border-top: 4px solid #16a34a;
+}
+
+/* 8. Zlepšení mezer a layoutu */
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* 9. Vylepšení responzivity obrázků */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 10. Moderní scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #86efac;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4ade80;
+}
+
+/* 11. Animace pro načítání */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card, .location-card, .project-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Zpoždění animace pro karty */
+.feature-card:nth-child(2) { animation-delay: 0.1s; }
+.feature-card:nth-child(3) { animation-delay: 0.2s; }
+.feature-card:nth-child(4) { animation-delay: 0.3s; }
+.feature-card:nth-child(5) { animation-delay: 0.4s; }
+.feature-card:nth-child(6) { animation-delay: 0.5s; }
+
+/* 12. Vylepšení formulářů a interaktivních prvků */
+input, textarea, select {
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
