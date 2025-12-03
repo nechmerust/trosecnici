@@ -1,4 +1,17 @@
+[file name]: robots.txt
+[file content begin]
 User-agent: *
 Allow: /
 
-Sitemap: https://csoptrosecnici.org/sitemap.xml
+Sitemap: https://vasedomena.cz/sitemap.xml
+
+# Blokovat vyhledávačům přístup k admin sekcím
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Povolit všechny stránky pro vyhledávače
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+[file content end]
